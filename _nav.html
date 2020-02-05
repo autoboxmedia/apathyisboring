@@ -1,0 +1,131 @@
+<nav class="navbar navbar-fixed-top squeeze-{{squeeze}}" role="navigation">
+  <div class="container" style="position:relative;">
+    <div class="navbar-header">
+
+    {% unless request.template == "user_sessions_new_wide" %}
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <img src="menu.png">
+      </button>
+
+      {% if request.logged_in? %}
+        <button type="button" class="navbar-toggle collapsed supporter-nav" data-toggle="collapse" data-target="#supporter-nav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <img class="profile-photo" src="{{ request.current_user.profile_image_url }}" alt="Open Settings">
+        </button>
+      {% endif %}
+    {% endunless %}
+
+      {% if site.has_meta_image? %}
+       <a class="navbar-brand site-logo" href="/"><img alt="{{ site.long_name }}" src="{{ site.meta_image_url }}"></a>
+      {% else %}
+        <a class="navbar-brand" href="/"><h3 class="strong">{{ site.long_name }}</h3></a>
+      {% endif %}
+      
+      
+      <!-- MAIN MENU -->
+      
+      <div id="menu-collapse" class="navbar-collapse collapse{% if site.broadcaster.has_facebook? or site.broadcaster.has_twitter? %} nav-follow-padding{% endif %}">
+        <ul class="nav navbar-nav">
+          {% for child in site.root_nav_pages %}
+          {% unless child.id == site.donation_page.id %}
+          {% if child.leaf? or child.nav_children.size == 0 %}
+          <li {% if child.is_or_is_ancestor_of_current_page? %}class="active"{% endif %}>
+            <a href="{{ child.url }}">{{ child.name }}</a>
+          </li>
+          {% else %}
+          <li class="{% if child.is_or_is_ancestor_of_current_page? %}active{% endif %} dropdown">
+            <a href="{{ child.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.name }}</a>
+            <ul class="dropdown-menu" role="menu">
+              <div class="container">
+                {% if site.show_parent_in_nav_dropdown? %}
+                  <li><a href="{{ child.url }}">{{ child.name }}</a></li>
+                {% endif %}
+                {% for child2 in child.nav_children %}
+                  <li><a href="{{ child2.url }}">{{ child2.name }}</a></li>
+                {% endfor %}
+              </div>
+            </ul>
+          </li>
+          {% endif %}
+          {% endunless %}
+          {% endfor %}
+
+          <div class="visible-xs">
+            {% include "header_buttons" %}
+          </div>
+
+        </ul>
+      </div>
+
+      <!-- END OF MAIN MENU -->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    {% unless request.template == "user_sessions_new_wide" %}
+      <div class="hidden-xs header-buttons">
+        {% include "header_buttons" %}
+      </div>
+    {% endunless %}
+
+    </div>
+
+    {% unless squeeze == true or request.template == "user_sessions_new_wide" %}
+
+      <div id="supporter-nav-collapse" class="collapse">
+        <ul class="nav navbar-nav">
+          <li class="gray-base"><a href="{{ request.current_signup.profile_url }}">Public Profile</a></li>
+          <li class="gray-base"><a href="{{ request.current_signup.settings_url }}">Settings</a></li>
+          <hr/>
+          {% if request.current_user.is_intern? %}
+            {% if request.current_user.can_publish? %}
+              {% if page_type == 'Blog' %}
+                <li class="accent"><a href="{{ page.admin_new_subpage_url }}">New blog post</a></li>
+                <li class="accent"><a href="{{ page.admin_edit_url }}">Edit this page</a></li>
+              {% elsif page_type == 'Suggestion Box' %}
+                <li class="accent"><a href="{{ page.admin_new_subpage_url }}">New suggestion</a></li>
+                <li class="accent"><a href="{{ page.admin_edit_url }}">Edit this page</a></li>
+              {% elsif page_type == 'Calendar' %}
+                <li class="accent"><a href="{{ page.admin_new_subpage_url }}">New event</a></li>
+                <li class="accent"><a href="{{ page.admin_edit_url }}">Edit this page</a></li>
+              {% elsif page_type == 'Blog Post' %}
+                <li class="accent"><a href="{{ page.blog_post.admin_edit_url }}">Edit this blog post</a></li>
+              {% elsif page_type == 'Question' %}
+                <li class="accent"><a href="{{ page.question.admin_edit_url }}">Edit this question</a></li>
+              {% elsif page_type == 'FAQ' %}
+                <li class="accent"><a href="{{ page.faq.admin_edit_url }}">Edit questions</a></li>
+              {% elsif page_type == 'Suggestion' %}
+                <li class="accent"><a href="{{ page.suggestion.admin_edit_url }}">Edit this suggestion</a></li>
+              {% elsif page_type == 'Event' %}
+                <li class="accent"><a href="{{ page.event.admin_edit_url }}">Edit this event</a></li>
+              {% elsif page_type == 'Profile' %}
+                <li class="accent"><a href="{{ profile.admin_edit_url }}">Edit this person</a></li>
+              {% elsif page %}
+                <li class="accent"><a href="{{ page.admin_edit_url }}">Edit this page</a></li>
+              {% endif %}
+            {% endif %}
+              <li class="accent"><a href="{{ site.admin_dashboard_url }}">Control panel</a></li>
+          {% endif %}
+          <hr/>
+          {% for child in site.supporter_pages %}
+          <li class="accent"><a class="{% if page == child %}active{% endif %}" href="{{ child.url }}">{{ child.name }}</a></li>
+          {% endfor %}
+          <hr/>
+          <li><a href="{{ site.edit_pages_url }}">Your pages</a></li>
+        </ul>
+      </div>
+
+      
+    {% endunless %}
+
+  </div>
+</nav>
+
+<div class="nav-fill"></div>

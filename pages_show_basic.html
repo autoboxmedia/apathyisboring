@@ -1,0 +1,258 @@
+<!-- CUSTOM RISE SUB PAGES FOR CITIES   -->
+{% if page.parent.slug == "rise" %}
+
+{% capture body %}{{ page.basic.content }}{% endcapture %}
+{% assign body_parts = body | split: '-SPLIT-' %}   
+
+            {% if page.has_meta_image? %}
+            <div style="background-image: url({{ page.meta_image_url }});" class="cities">
+                 <h2>{{ page.headline }}</h2>
+            </div>
+              {% endif %}
+
+ <div class="container not-home vote">
+    <div class="row">
+      
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ambassadors">
+        <div id="content">
+
+{{ body_parts[0] }}
+        </div></div></div></div>
+
+<div class="container questions not-home">
+           <div class="row pink reg rise-project">
+             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="color:white;">
+ {{ body_parts[1] }}
+
+  </div></div></div>
+
+
+<div class="container questions">
+           <div class="row green">
+ {{ body_parts[2] }}
+
+        </div></div>
+
+
+<!-- CUSTOM CAREER LISTINGS SUB PAGES FOR CAREERS PAGE   -->
+{% elsif page.parent.slug == "careers" %}
+{% capture body %}{{ page.basic.content }}{% endcapture %}
+{% assign body_parts = body | split: '-SPLIT-' %} 
+
+<div class="container not-home careers-listing">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+<h2 class="pink-header">{{ page.name }}</h2>
+   {{ body_parts[0] }}
+  <div class="btn-arrow">
+  <a href="/careers">BACK TO CAREERS</a>
+  </div>
+</div>
+</div>
+    </div>
+
+<div class="container questions">
+           <div class="row green">
+{{ body_parts[1] }}
+  </div></div>
+
+<!-- CUSTOM CAREERS PAGE   -->
+{% elsif page.slug == "careers" %}
+{% capture body %}{{ page.basic.content }}{% endcapture %}
+{% assign body_parts = body | split: '-SPLIT-' %} 
+<div class="container not-home careers-listing">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+<h2 class="pink-header">{{ page.name }}</h2>
+  <div class="block-links">
+   {{ body_parts[0] }}
+  </div>
+  <div class="clearfix"></div>
+  <div class="block-links">
+  {{ body_parts[1] }}
+  </div>
+  <div class="clearfix"></div>
+    <div class="btn-arrow">
+  <a href="/contact">BACK TO CONTACT</a>
+  </div>
+</div>
+</div>
+    </div>
+
+<div class="container questions">
+           <div class="row green">
+{{ body_parts[2] }}
+  </div></div>
+
+
+
+
+<!-- CUSTOM BOARD MEMBER PAGE   -->
+{% elsif page.parent.slug == "our-board" %}
+
+  <div class="container questions not-home careers-listing board-members">
+           <div class="row green reg">
+             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+               <h2>{{ page.name }}</h2>
+              <div class="col-sm-12 col-md-4 right">
+                <img src="{{ page.meta_image_url }}"></div>
+     <div class="col-sm-12 col-md-8">          
+       {{ page.basic.content }}</div>
+               
+               <div class="clearfix"></div>
+                 <div class="btn-arrow">
+                   <a href="/our-board">BACK TO OUR BOARD</a>
+  </div>
+             </div></div></div>
+
+
+
+<!-- CUSTOM TEAM MEMBER PAGE   -->
+{% elsif page.parent.slug == "our-team" %}
+
+  <div class="container questions not-home careers-listing board-members team-members">
+           <div class="row white reg">
+             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+               <h2 class="pink-header">{{ page.name }}</h2>
+               <h3>{{ page.headline }}</h3>
+              <div class="col-sm-12 col-md-4 right">
+                <img src="{{ page.meta_image_url }}"></div>
+     <div class="col-sm-12 col-md-8">          
+       {{ page.basic.content }}</div>
+               
+               <div class="clearfix"></div>
+                 <div class="btn-arrow">
+                   <a href="/our-team">BACK TO OUR TEAM</a>
+  </div>
+             </div></div></div>
+
+
+
+<!-- CUSTOM RESOURCES PAGE   -->
+{% elsif page.parent.slug == "resources" %}
+<div class="container not-home">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 res-single">
+<h2 class="pink-header">{{ page.headline }}</h2>
+</div>
+</div>
+    </div>
+
+
+<!-- WHITE ROW -->
+          <div class="container questions not-home careers-listing">
+           <div class="row">
+             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 res-single">
+             <div class="container-blocks">  
+               {{ page.basic.content }}
+               </div>
+               
+               <div class="btn-arrow">
+  <a href="/resources">BACK TO RESOURCES</a>
+  </div>
+
+               
+             </div></div></div>
+
+ <!-- GREEN ROW -->
+<div class="container questions">
+           <div class="row green">
+       <h3 style="text-align: center;">Questions?</h3>
+<h2 style="text-align: center;">Feel Free to Reach out</h2>
+<p style="text-align: center;"><a class="btn" href="/contact">Contact Us</a></p>
+  </div></div>
+
+
+<!-- CUSTOM ARCHIVE PAGE   -->
+{% elsif page.parent.slug == "archive" %}
+<div class="container not-home">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 res-single">
+<h2 class="pink-header">{{ page.headline }}</h2>
+</div>
+</div>
+    </div>
+
+
+<!-- WHITE ROW -->
+          <div class="container questions not-home careers-listing">
+           <div class="row">
+             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 res-single">
+             <div class="container-blocks">  
+               {{ page.basic.content }}
+               </div>
+               
+               <div class="btn-arrow">
+  <a href="/archive">BACK TO ARCHIVE</a>
+  </div>
+
+               
+             </div></div></div>
+
+ <!-- GREEN ROW -->
+<div class="container questions">
+           <div class="row green">
+       <h3 style="text-align: center;">Questions?</h3>
+<h2 style="text-align: center;">Feel Free to Reach out</h2>
+<p style="text-align: center;"><a class="btn" href="/contact">Contact Us</a></p>
+  </div></div>
+
+
+{% else %}
+
+
+
+{% if page.is_homepage? == true and site.page_tags contains "homepage" %}
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        {% if page.headline.size > 0 %}
+          <h2 class="headline">{{ page.headline }}</h2>
+        {% endif %}
+        <div id="content">
+
+          <div id="intro" class="intro">
+            <div class="text-content">
+              {{ page.basic.content }}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {% tag "homepage" with "homepage_widget" %}
+{% else %}
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2"> 
+
+        {% if page.headline.size > 0 %}
+        <h2 class="headline">{{ page.headline }}</h2>
+        {% endif %}
+
+        <div id="content">
+
+          <div id="intro" class="intro">
+            <div class="text-content">
+              {{ page.basic.content }}
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div> 
+
+
+{% endif %}
+
+{% endif %}

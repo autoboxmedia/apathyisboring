@@ -1,0 +1,44 @@
+{% if page.features_count > 0 %}
+
+{% if page.features.size > 0 %}
+
+{% assign first_feature_height = page.features.first.image_height %}
+{% if page.features.size == 1 %}
+  {% assign first_feature_height = 'none' %} 
+{% endif %}
+
+<div id="page-features" class="page-features" style="max-height: {{ first_feature_height  }}px">
+  {% if page.features.size == 1 %}
+
+  {% for feature in page.features %}
+ 
+    <img src="{{ feature.image_url }}" height="{{ feature.image_height }}" width="{{ feature.image_width }}"/>
+
+  {% endfor %}
+
+  {% else %}
+  <div id="feature-slides1" class="feature-slides">
+
+    <ul class="slides clearfix" >
+
+      {% for feature in page.features %}
+              {% if feature.name == "Top Slider" %}
+      <li>
+        
+      
+          <img src="{{ feature.image_url }}" height="{{ feature.image_height }}" width="{{ feature.image_width }}"/>
+       
+      </li>
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+  </div>
+
+  {% endif %}
+
+</div>
+
+{% endif %}
+
+{% endif %}

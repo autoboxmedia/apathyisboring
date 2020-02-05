@@ -1,0 +1,229 @@
+// donation-v2 pages
+.page-type-donation-v2.page-pages-show-donation-v2-wide {
+	.card-error-container .card-error {
+		font-size: 13px;
+		padding-top: 5px;
+		color: $brand-danger;
+	}
+	span.error-message {
+		@extend .form-error;
+	}
+	.ticket-list {
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			li {
+				font-size: 20px;
+				line-height: 30px;
+				font-weight: bold;
+			}
+		}
+	}
+	.text-rule {
+		font-size: 13px;
+	}
+	a.clear-order {
+		font-size: 18px;
+	}
+	.small-gutter {
+		padding: 0 30px;
+    > .row {
+      padding-left: 5px;
+      padding-right: 5px;
+      .row {
+          margin-left: -5px;
+          margin-right: -5px;
+      }
+      *[class*="col-"] {
+          padding-left: 5px;
+          padding-right: 5px;
+      }
+    }
+	}
+	.small-gutter div[class*="col-"].donation-v2-container {
+		padding: 50px 15px;
+		@extend .alpha-shadow;
+		background: white;
+
+	}
+	#donation_amount_other {
+		display: none;
+		+ label {
+			top: 0;
+			margin: 0;
+		}
+		&:focus + label,
+		&:active + label {
+			top: 0;
+			font-size: 13.5px;
+			background-color: $gray-base;
+			color: $body-bg;
+			border-color: transparent;
+		}
+	}
+	.donation-other-input-container {
+		.currency-symbol {
+			position: absolute;
+			font-size: 24px;
+			position: absolute;
+			top: 50%;
+			left: 7px;
+			transform: translate( 0, -50%);
+		}
+		.nb_donation_v2_amount {
+			@extend .form-control;
+			padding: 9px 9px 9px 24px !important;
+			font-size: 20px !important;
+		}
+	}
+	.card-monthly div {
+		font-size: 12px;
+	}
+	.radio-inline.donation-v2-amounts {
+		width: 100%;
+		margin: 0 0 10px;
+		label {
+			background: $gray;
+			color: $btn-gray-color;
+		}
+		input[type="radio"]:checked+label {
+			background-color: $gray-base;
+			color: $body-bg;
+			border-color: transparent;
+		}
+		.used#donation_amount_other+label {
+			font-size: 13.5px;
+		}
+		span {
+			float: left;
+			padding: 5px;
+			min-width: 33.333%;
+			width: 33.333%;
+			&:nth-child(3n) {
+				padding-right: 0;
+			}
+			&:nth-child(3n + 1) {
+				padding-left: 0;
+			}
+			label {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	.donation-v2-occurence-radio {
+		position: relative;
+		left: 4.5px;
+		> span {
+			@extend .radio-inline;
+			width: 50%;
+			float: left;
+			&:first-child {
+				padding-right: 8px;
+			}
+			&:last-child {
+				padding-left: 3px;
+				margin: 0;
+			}
+			label.radio {
+				left: 0;	
+				position: relative;
+				width: 100%;
+				min-width: 100%;
+				margin: 0;
+				background: $gray;
+				color: $btn-gray-color;
+			}
+			input[type="radio"]:checked+label.radio {
+				background-color: $gray-base;
+				color: $body-bg;
+				border-color: transparent;
+				&:hover {
+					color: $body-bg;
+				}
+			}
+			input[type="radio"]+label.radio {
+				&:hover {
+					color: $btn-gray-color;
+				}
+			}
+		}
+	}
+	.contribution-rules {
+		font-size: 18px;
+	}
+	.submit-container {
+		background-color: $gray-lighter;
+		border-radius: 2px;
+		text-align: center;
+		padding: 35px 15px 50px;
+		.donation-v2-amount {
+			font-size: 40px;
+			margin-bottom: 25px;
+			width: 100%;
+			min-height: 46px;
+			line-height: initial;
+			span {
+				opacity: 1;
+				font-weight: bold;
+				display: inline-block;
+				.nb_donation_v2_interval {
+					font-size: 17px;
+					&.hidden {
+						display: none;
+						opacity: 0;
+					}
+				}
+				&.hidden {
+					opacity: 0;
+					display: none;
+					+ span {
+						font-size: 22px;
+						font-weight: normal;
+					}
+					~ .nb_donation_v2_interval {
+						display: none;
+					}
+				}
+			}
+			.nb_donation_v2_amount {
+				margin-left: 4px;
+			}
+			.hidden + .nb_donation_amount {
+				font-size: 22px;
+			}
+		}
+	}
+}
+@media (min-width: 767px) {
+	.page-type-donation-v2.page-pages-show-donation-v2-wide {
+		.donation-v2-container {
+			border-radius: 9px;
+			padding: 60px;
+		}
+		.radio-inline.donation-v2-amounts span {
+			min-width: 25%;
+			width: 25%;
+			&:nth-child(3n) {
+				padding-right: 5px;
+			}
+			&:nth-child(3n + 1) {
+				padding-left: 5px;
+			}
+			&:nth-child(4n) {
+				padding-right: 0;
+			}
+			&:nth-child(4n + 1) {
+				padding-left: 0;
+			}
+		}
+		.small-gutter {
+			> .row {
+				padding: 0 100px;
+			}
+			div[class*="col-"].donation-v2-container {
+				padding: 50px 60px;
+			}
+		}
+	}
+}

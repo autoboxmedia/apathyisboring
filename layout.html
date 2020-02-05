@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="theme.scss" rel="stylesheet">
+    
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" href="effect.css">
+	<link rel="stylesheet" type="text/css" href="flashy.min.css">
+    
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+
+
+    {% if page.type_name == 'Donation' or page.type_name == 'Donation (v2)' %}
+      <script type="text/javascript" src="jquery.ui.effect.min.js"></script>
+      <script type="text/javascript" src="jquery.ui.effect-slide.min.js"></script>
+      <script type="text/javascript" src="staged-donations.js"></script>
+    {% endif %}
+
+    {% if page.is_homepage? and site.has_header_image? %}
+      <script type="text/javascript" src="splashHeader.js"></script>
+    {% endif %}
+
+    <script data-cfasync="false" type="text/javascript" data-bablic="5aecc9541997741a3264d957" data-bablic-m="[0,'en','en',1,['fr_ca'],0,0,0,0,0,0,0,0,[],'apathyisboring.com/',[],['_v',2]]" src="//cdn2.bablic.com/js/bablic.3.9.js"></script>
+    
+    
+    
+    
+    
+    
+  </head>
+  <body class="aware-theme v2-theme {{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+
+    {% if page.is_homepage? and site.has_header_image? %}
+      <div class="splash">
+        <div class="container">
+          <div class="splash-background" style="background-image: url({{ site.header_image_url_1026 }})">
+            <div class="overlay"></div>
+            <h1 class="splash-title inverse strong">{{ site.subheadline }}</h1>
+            <a class="splash-arrow"><img src="down-arrow.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% assign squeeze = false %}
+    {% if page.type_name == "Donation" or page.type_name == "Donation (v2)" %}
+      {% assign squeeze = true %}
+    {% else %}
+      {% for tag in page.tags %}
+        {% if tag.slug == "squeeze_page" %}
+          {% assign squeeze = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <div {% if page.is_homepage? and site.has_header_image? %}class="splash-wrapper"{% endif %}>
+      {% include "nav" %}
+
+      {% if page.is_homepage? %}
+        {% include "features" %} 
+      {% endif %}
+
+      <div class="main-container" id="middle">
+        <div class="main clearfix">
+
+          <div class="column content-{{ request.template  | replace: '_', '-' }}">
+            <div class="columns-1-flash">
+              <div class="container">
+                {{ content_for_notifications }}
+              </div>
+            </div>
+            {% yield %}
+          </div><!-- .column -->
+
+        </div>
+        <!-- .main -->
+      </div>
+      <!-- .main-container -->
+      
+{% unless page.slug == "join_rise" or request.template == "pages_show_volunteer_signup" %}
+{% tag "homepage" with "homepage_widget" %}
+{% endunless %}
+      
+
+      {{ content_for_footer }}
+
+      {% unless request.template == "user_sessions_new_wide" %}
+        <footer>
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-6">
+                <a class="navbar-brand site-logo" href="/"><img alt="{{ site.long_name }}" src="aisb_logo_white.svg"></a>
+              </div> 
+              
+              <div class="col-sm-6"> 
+                <a class="btn" href="http://www.youthfriendly.com/" target="_blank">Visit Youth Friendly Site</a>
+                <a class="btn" href="/donate">Support Apathy is boring</a>
+                
+               
+                  <a href="http://nationbuilder.com/" title="http://www.nationbuilder.com" style="display:none;">Created with NationBuilder.</a>
+               
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+                        <div class="row">
+              <div class="col-sm-6 fl-right">
+                       {% if site.footer_content.size > 0 %}
+                <div class="footer-text">{{ site.footer_content }}</div>
+                {% endif %}
+              </div>
+              
+              
+              
+              <div class="col-sm-6 fl-right">
+              <p class="copyright">© <script>document.write(new Date().getFullYear())</script> Apathy is Boring. Built by 
+                <a href="https://skyrocket.is" target="_blank">Skyrocket.</a></p>
+            </div>
+
+           
+</div>
+       
+
+
+
+            
+
+          </div>
+          <!-- container -->
+        </footer>
+      {% endunless %}
+      {% if request.current_user.is_intern? %}
+        {% include "cp_nav" %}
+      {% endif %}
+
+      <script src="bootstrap.js"></script>
+      <script>
+      $('p:empty').remove();
+        $('p').filter(function () { return $.trim(this.innerHTML) == "" }).remove();
+        $('p').each(function () {
+    if ($.trim($(this).html()) === '<br>') $(this).remove();
+});
+        
+        var el = document.querySelector('.container-blocks');
+el.innerHTML = el.innerHTML.replace(/&nbsp;/g,'');
+      </script>
+
+    </div>
+
+    <script type="text/javascript" src="jquery.flashy.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>

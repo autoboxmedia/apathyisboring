@@ -1,0 +1,45 @@
+<style>
+  span.red {color:#5EFFC9;}
+  .rise-form,.rise-form .form {margin-top:0;}
+  .rise-form input[type="radio"]:checked,.radio input[type="radio"]:checked {border: 1px solid #000 !important;}
+  .radio input[type="radio"]:checked:after, .rise-form input[type="radio"]:checked:after{background: black !important;}
+  .labeled-tags-container .required_field {display:block; color:white;}
+  .rise-form {width:400px;max-width:100%; margin:0 auto;color:white;}
+  .rise-form input[type="submit"] {margin-top:30px !important;}
+  .radio label {color:white;}
+</style>
+<div class="rise-form">
+      {% form_for signup %}
+<div class="form">
+
+          <div class="form-errors">{% error_messages_for signup %}</div>
+
+          {% if request.sorta_logged_in? == false or request.current_signup.has_mobile? == false %}
+            <div class="row">
+              <div class="col-md-12"><div class="form-group">
+                <p>Email <span class="red">*</span></p>
+                <div class="required_field">Please enter valid information.</div>
+                {% email_field "email", class:"text form-control wc_required", required: "required" %}</div></div>
+            </div>
+          {% endif %}
+
+
+
+          {% if page.signup.has_labeled_tags? %}
+            {% include "labeled_tags" %}
+          {% endif %}
+
+
+          {% if page.signup.is_all_info_collected? == false %}
+          {% if request.sorta_logged_in? %}
+          {% submit_tag "Update info", class:"submit-button btn btn-lg btn-default margintopmore" %}
+          {% else %}
+          {% submit_tag "Feed Me", class:"submit-button btn btn-lg btn-default margintopmore" %}
+          {% endif %}
+          {% endif %}
+
+
+          <div class="form-submit"></div>
+      </div>
+          {% endform_for %}
+      </div>

@@ -1,0 +1,7 @@
+{% for post in tag.most_recent_published_pages limit: 50 %}
+<div class="col-sm-6">
+                <a href="{{ post.url }}" class="img-container"><img src=" {{post.meta_image_url}}"></a>
+           <h3>{{ post.headline }}</h3>
+               <a href="{{ post.url }}" class="btn">Learn More</a>
+               </div>
+{% endfor %}

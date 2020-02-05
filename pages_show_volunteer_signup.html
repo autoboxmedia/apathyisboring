@@ -1,0 +1,719 @@
+<style>
+  .radio label, .checkbox label {top:0;float:none;margin-bottom:15px;}
+  </style>
+
+<div class="container rise-form">
+  <div class="row">
+    <div class="col-sm-6 col-lg-5 col-lg-offset-1">  
+
+      {% if page.headline.size > 0 %}
+      <h2 class="headline" style="margin-top:5px;margin-bottom:20px;">{{ page.headline }}</h2>
+      <span class="red">* Required</span>
+      {% endif %}
+
+      <div id="content">
+        {% if page.volunteer_signup.content.size > 0 %}
+          <div id="intro" class="intro">
+            {{ page.volunteer_signup.content }}
+          </div>
+        {% endif %}
+
+        {% if page.show_social_slider? and page.public_activities_count > 0 %}
+        {% include "social_slider" %}
+        {% endif %}
+
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-5">
+
+      <div class="form-wrap">
+        <div class="form" style="margin-top:0;">
+          
+           {% if request.logged_in? == true or request.sorta_logged_in? == true %}
+          <div class="padtop">
+           <p> If you're not {{ request.current_signup.name_or_email }},
+             <a href="{{ request.current_signup.logout_url }}">click here</a>.</p><br/>
+          </div>
+          {% endif %}
+          
+
+          {% form_for volunteer_signup %}
+
+            <div class="form-errors">{% error_messages_for volunteer_signup %}</div>
+
+            <div class="row">
+              <div class="col-md-12">
+                {% for volunteer_type in page.volunteer_signup.volunteer_types %}
+                  <div class="checkbox">{% check_box_tag 'volunteer_signup[volunteer_type_ids][]', volunteer_type.id, collection:volunteer_signup.volunteer_type_ids, member:volunteer_type.id, class:"checkbox" %}
+                    <label>{{ volunteer_type.name }}</label></div>
+                {% endfor %}
+              </div>
+            </div>
+            
+            {% hidden_field_tag 'volunteer_signup[volunteer_type_ids][]', '' %}
+
+            
+              <div class="row">
+            <div class="col-md-12"><div class="form-group">
+              <p>First Name <span class="red">*</span></p>
+              <div class="required_field">Please enter valid information.</div>
+              {% text_field "first_name", class:"text form-control wc_required", required: "required" %}</div></div>
+          </div> 
+          
+                        <div class="row">
+            <div class="col-md-12"><div class="form-group">
+              <p>Last Name <span class="red">*</span></p>
+            <div class="required_field">Please enter valid information.</div>
+              {% text_field "last_name", class:"text form-control wc_required", required: "required" %}</div></div>
+          </div>
+            
+
+           
+              <div class="row">
+                <div class="col-md-12"><div class="form-group">
+                  <p>Email <span class="red">*</span></p>
+                  <div class="required_field">Please enter valid information.</div>
+                  {% email_field "email", class:"text form-control wc_required", required: "required" %}</div></div>
+              </div>
+          
+          
+                 <div class="row">
+                <div class="col-md-12"><div class="form-group">
+                  <p>City <span class="red">*</span></p>
+                  <div class="required_field">Please enter valid information.</div>
+                  {% text_field "home_address.city", class:"text form-control wc_required", required: "required" %}</div></div>
+              </div>
+ 
+          
+          
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}
+          {% if custom_field.slug contains "gender" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.gender.multiple_choice_options, required: "required"  %}          
+<div id="o" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_gender_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='o' class='wc_required' />")
+    .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_gender_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#o");
+});
+            </script> 
+{% endif %}    
+          {% endfor %}  
+          
+          
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}
+          
+{% if custom_field.slug contains "other_field_gen" %}
+<div class="row other-field">
+            <div class="col-md-12"><div class="form-group">
+              <div class="required_field">Please enter valid information.</div>
+{% text_field custom_field_id, class:"text form-control" %}
+</div>
+  </div></div>
+{% endif %}
+          
+           {% endfor %}
+          
+          
+          
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}
+          
+{% if custom_field.slug contains "neighbourhood" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please enter valid information.</div>
+{% text_field custom_field_id, class:"text form-control wc_required", required: "required" %}
+</div>
+  </div></div>
+{% endif %}
+           {% endfor %}
+          
+          
+          
+           <div class="row">
+            <div class="col-md-12"><div class="form-group checkbox identify">
+<p>Please select the descriptions you identify with. Check all that apply.<span class="red">*</span></p>
+<div class="required_field">Please select one or more of the following options.</div>
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}            
+{% if custom_field.slug contains "identify1" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}           
+{% if custom_field.slug contains "identify2" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}         
+{% if custom_field.slug contains "identify3" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}          
+{% if custom_field.slug contains "identify4" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}           
+{% if custom_field.slug contains "identify5" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}        
+{% if custom_field.slug contains "identify6" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}             
+{% if custom_field.slug contains "identify7" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}           
+{% if custom_field.slug contains "identify8" %}
+              {% check_box custom_field_id, class:"wc_required" %} <label>{{ custom_field.name }}</label><br/>
+              {% endif %}
+             {% endfor %}
+              
+</div></div></div>
+          
+          
+{% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}  
+          
+{% if custom_field.slug contains "commit_to_volunteering" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.commit_to_volunteering.multiple_choice_options, required: "required" %}
+<div id="r" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_commit_to_volunteering_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='r' class='wc_required' />")
+   .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_commit_to_volunteering_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#r");
+});
+            </script>
+{% endif %}  
+           {% endfor %}  
+          
+          
+          
+          {% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}  
+          
+{% if custom_field.slug contains "talking_to_people" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.talking_to_people.multiple_choice_options, required: "required" %}
+<div id="p" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_talking_to_people_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='p' class='wc_required' />")
+   .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_talking_to_people_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#p");
+});
+            </script>
+{% endif %}  
+           {% endfor %}  
+          
+          
+          
+                    {% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}  
+          
+{% if custom_field.slug contains "outdoor_environments" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.outdoor_environments.multiple_choice_options, required: "required" %}
+<div id="a" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_outdoor_environments_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='a' class='wc_required' />")
+   .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_outdoor_environments_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#a");
+});
+            </script>
+{% endif %}  
+           {% endfor %} 
+          
+          
+                              {% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}  
+          
+{% if custom_field.slug contains "learn_about_voting" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.learn_about_voting.multiple_choice_options, required: "required" %}
+<div id="b" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_learn_about_voting_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='b' class='wc_required' />")
+   .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_learn_about_voting_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#b");
+});
+            </script>
+{% endif %}  
+           {% endfor %} 
+          
+                                        {% for cf in custom_fields.signup %}
+{% assign custom_field = cf[1] %}
+{% assign custom_field_id = 'signup.custom_values.' | append: custom_field.slug %}  
+          
+{% if custom_field.slug contains "other_volunteer_opportunities" %}
+<div class="row">
+            <div class="col-md-12"><div class="form-group radio-c">
+<p>{{ custom_field.name }} <span class="red">*</span></p>
+              <div class="required_field">Please select one of the following options.</div>
+{% collection_select custom_field_id, custom_fields.signup.other_volunteer_opportunities.multiple_choice_options, required: "required" %}
+<div id="z" class="radio"></div>
+              </div>
+  </div></div>
+                    <script>
+            jQuery("#volunteer_signup_signup_custom_values_other_volunteer_opportunities_custom option").each(function(i, e) {
+  (jQuery("<input type='radio' name='z' class='wc_required' />")
+   .attr("value", jQuery(this).val())
+    .click(function() {
+      jQuery("#volunteer_signup_signup_custom_values_other_volunteer_opportunities_custom").val(jQuery(this).val());
+    }).add($("<label>"+ this.textContent +"</label><br/>")))
+    .appendTo("#z");
+});
+            </script>
+{% endif %}  
+           {% endfor %} 
+             
+
+
+            <div class="row">
+              <div class="col-md-12"><div class="form-group">
+                <p>We’d like to know more about you, if there is more you’d like to share, please go ahead.</p>
+                {% text_area "content", class:"textarea form-control autogrow" %}</div>
+              </div>
+            </div>
+          
+          
+              {% if request.logged_in? == false %}
+          {% if request.sorta_logged_in? == false %}
+              <div class="row">
+                <div class="col-md-12"><div class="checkbox">{% check_box "email_opt_in", class:"checkbox" %}<label for="volunteer_signup_email_opt_in">Send me email updates</label></div>
+                </div>
+                {% if site.ask_for_mobiles? %}
+                  <div class="col-md-12"><div class="checkbox">{% check_box "mobile_opt_in", class:"checkbox" %}<label for="volunteer_signup_mobile_opt_in">Send me text messages</label></div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+           {% endif %}
+          
+
+            {% submit_tag "SUBMIT", class:"submit-button btn btn-lg btn-default margintopmore" %}
+
+         
+          
+          <div class="error-box" style="position:absolute;">All areas with <span class="red">*</span> are required. 
+            Please ensure that fields have been completed.</div>
+
+            <div class="form-submit"></div>
+
+          {% endform_for %}
+
+        </div>
+      </div>
+
+    </div>
+
+<script type="text/javascript">
+
+          $('#volunteer_calgary_page_new_volunteer_signup_form input[type=radio]').each(function()
+          {
+              if( ! $(this).closest('.form-group').find('#f').length)
+              {
+                $(this).addClass("wc_required")
+              }
+          });
+
+
+
+$(document).ready(function()
+{
+
+  // Hide other textboxes
+$("#volunteer_signup_signup_custom_values_other_field_gen_custom").hide();
+
+  // For gender radio button
+  $("input[name='o']").change(function()
+  {
+
+    var gender = $('input[name="o"]:checked').val();
+
+    if(gender == 3)
+    {
+$("#volunteer_signup_signup_custom_values_other_field_gen_custom").addClass( "wc_required" ).show()
+    }
+    else
+    {
+$("#volunteer_signup_signup_custom_values_other_field_gen_custom").removeClass( "wc_required" ).hide()
+$("#volunteer_signup_signup_custom_values_other_field_gen_custom").closest('.form-group').find('.required_field').hide();
+    }
+
+  });
+
+
+  // For Identify checkboxes
+  $('.identify input[type=checkbox]').on('change', function()
+  {
+
+    console.log($(this).attr('id'));
+    if( $(this).attr('id') == 'volunteer_signup_signup_custom_values_identify8_custom')
+    {
+        if($(this).attr('id') == 'volunteer_signup_signup_custom_values_identify8_custom')
+        {
+
+            $('.identify input:checkbox').prop('checked', false);
+            $('.identify #volunteer_signup_signup_custom_values_identify8_custom').prop('checked', true);
+
+        }
+
+
+    }
+    else
+    {
+
+       $('.identify #volunteer_signup_signup_custom_values_identify8_custom').prop('checked', false);
+
+    }
+
+
+  });
+
+
+
+
+  function wc_alphanumeric(inputTxt)
+  {
+    var letterNumber = /^[0-9a-zA-Z]+$/;
+    //var letterNumber = /^[a-zA-Z0-9]+$/;
+
+    if(inputTxt.match(letterNumber))
+    {
+      console.log('true');
+    }
+    else
+    {
+      console.log('false');
+
+    }
+    return false;
+  }
+
+
+  function check_validation()
+  {
+    var flag=true;
+    $('.volunteer_signup_form input,.volunteer_signup_form textarea').each(function()
+
+    {
+
+      /** radio **/
+      if( $(this).is(':radio') && $(this).hasClass("wc_required") )
+      {
+
+        //console.log('radio with wc_required');
+if($(this).closest('.form-group').find('input[type=radio]:checked').length == 0)
+        {
+          //console.log('radio not selected');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('radio selected');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+
+
+      /** checkbox **/
+      if( $(this).is('input:checkbox') && $(this).hasClass("wc_required") )
+      {
+
+        //console.log('checkbox with wc_required');
+if($(this).closest('.form-group').find('input[type=checkbox]:checked').length == 0)
+        {
+          //console.log('checkbox not checked');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('checkbox checked');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+
+      /** textarea **/
+      if( $(this).is('textarea') && $(this).hasClass("wc_required") )
+      {
+
+        //console.log('textarea with wc_required');
+        if($(this).val() == 0)
+        {
+          //console.log('textarea not filled');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('textarea filled');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+
+      /** text **/
+      if( $(this).is('input:text') && $(this).hasClass("wc_required") )
+      {
+
+        //console.log('text with wc_required');
+        if($(this).val() == 0)
+        {
+          //console.log('text not filled');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('text filled');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+
+      /** email **/
+      if( $(this).is('input[type=email]') && $(this).hasClass("wc_required") )
+      {
+
+        //console.log('email with wc_required');
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if(!emailReg.test($(this).val()) || $(this).val() == '')
+        {
+          //console.log('email not filled');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('email filled');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+
+      /** Phone **/
+      if( $(this).is('input[type=tel]') && $(this).hasClass("wc_required") )
+      {
+
+
+
+        //console.log('tel here');
+
+
+        if( $(this).val() == '' || !$.isNumeric($(this).val()) )
+        {
+          console.log('tel not valid');
+$(this).closest('.form-group').find('.required_field').show();
+          flag=false;
+        }
+        else if($(this).val().length < 10)
+        {
+          console.log('Min issue');
+$(this).closest('.form-group').find('.required_field').text("Please enter minimum 10 digits").show();
+          flag=false;
+
+        }
+        else if($(this).val().length > 30)
+        {
+          console.log('Max issue');
+$(this).closest('.form-group').find('.required_field').text("Please enter maximum 30 digits").show();
+          flag=false;
+        }
+        else
+        {
+          //console.log('tel filled');
+$(this).closest('.form-group').find('.required_field').hide();
+        }
+
+      }
+
+    });
+
+    //console.log('flag '+flag);
+
+    if(flag == false)
+    {
+      $('.error-box').show();
+    }
+    else
+    {
+      $('.error-box').hide();
+    }
+
+    return flag;
+
+  }
+
+
+
+  $(".volunteer_signup_form" ).submit(function( event )
+  {
+    var $window = jQuery(window);
+    var res = check_validation();
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1)
+    {
+      if($window.width() > 600)
+      {
+        $('html, body').animate({
+              scrollTop: $('.error-box').offset().top
+                }, 0);
+      }
+      else
+      {
+        $('html, body').animate({
+              scrollTop: $('.error-box').offset().top-400
+                }, 0);
+      }
+    }
+    return res;
+  });
+
+  $(".volunteer_signup_form .btn").click(function()
+  {
+    var $window = jQuery(window);
+    var res = check_validation();
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1)
+    {
+      if($window.width() > 600)
+      {
+
+        $('html, body').animate({
+              scrollTop: $('.error-box').offset().top
+                }, 0);
+      }
+      else
+      {
+
+        $('html, body').animate({
+              scrollTop: $('.error-box').offset().top-400
+                }, 0);
+      }
+    }
+    return res;
+  });
+
+
+
+
+
+  $('.volunteer_signup_form input,.volunteer_signup_form textarea').each(function()
+
+
+
+  {
+      $(this).removeAttr("required");
+  });
+
+
+});
+
+      $('#signup_phone_number').keyup(function () {
+    if (!this.value.match(/[0-9]/)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    }
+});
+
+
+</script>
+
+
+  </div>
+</div>
+

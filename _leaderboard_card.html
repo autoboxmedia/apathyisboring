@@ -1,0 +1,11 @@
+<div class="card leaderboard-card">
+
+  <h2 class="position strong accent">{{ entry.position }}</h2>
+
+  <h4 class="strong">{{ entry.signup.published_name_linked }}</h4>
+  <p>{{ entry.total }} {{ leaderboard.goal_name }}</p>
+
+  {% assign signup = entry.signup %}
+  {% include "signup_icon" %}
+
+</div>

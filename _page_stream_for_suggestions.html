@@ -1,0 +1,177 @@
+{% if page.public_activities_count > 0 or page.is_commentable? %}
+<div id="stream">
+  <div id="comment" class="comment">
+    <div class="container">
+
+      <div class="page-follow" id="page_follow_{{ page.id }}">
+        {% include "page_follow" %}
+      </div>
+
+      <ul class="nav nav-tabs" id="streamTabs" role="tablist">
+        <li role="presentation" class="active"><a href="#comments">Comments {% if page.comments_count > 0 %}<span class="label label-default">{{ page.comments_count }}</span>{% endif %}</a></li>
+
+        {% if page.type_name == 'Petition' and page.petition.is_image? and page.petition.signatures_with_images.size > 0 %}
+
+           <li role="presentation"><a href="#petition-photos">Photos {% if page.petition.signatures_with_images.size > 0 %}<span class="label label-default">{{ page.petition.signatures_with_images.size }}</span>{% endif %}</a></li>
+
+        {% elsif page.type_name == 'Endorsement' and page.endorsement.featured_endorsements.size > 0 %}
+
+           <li role="presentation"><a href="#featured_endorsements">Featured Endorsements {% if page.endorsement.featured_endorsements.size > 0 %}<span class="label label-default">{{ page.endorsement.featured_endorsements.size }}</span>{% endif %}</a></li>
+
+        {% endif %}
+
+      </ul>
+
+    </div>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="comments"> 
+        <div class="reaction-wrap">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-md-6">
+                {% if page.is_commentable? and page.type_name != 'Petition' and page.type_name != 'Endorsement' %}
+                <div class="form-wrap">
+                  <div class="form">
+
+                    {% form_for comment %}
+
+                      {% if page.type_name == 'Suggestion' %}
+                      {% if page.suggestion.suggestion_box_tag_names.size > 0 %}
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="tag-page">
+                            <strong>How would you tag this suggestion?</strong>
+                            {% include "suggestion_tag_list" %}
+                          </div>
+                        </div>
+                      </div>
+                      {% endif %}
+                      {% endif %}
+
+                      <div class="form-errors">{% error_messages_for comment %}</div>
+
+                      {% text_area "content", class:"textarea form-control autogrow", rows:"5" %}
+                    
+                      <input type="hidden" class="text" id="pending_object_id" name="pending_object_id" value="{{ request.pending_object_id }}"/>
+
+                      <div class="row {% if request.logged_in? %}padtopmore{% endif %}">
+                        <div class="col-md-6">
+                          {% if request.logged_in? %}
+                            {% submit_tag "Post your comment", class:"submit-button btn btn-primary" %}
+                          {% else %}
+                            {% submit_tag "Post your comment", class:"submit-button btn btn-default hide" %}
+                          {% endif %}
+                        </div>
+
+                        <div class="col-md-6">
+                          {% if request.logged_in? and site.has_rule_page? %}
+                          <div class="review-rules padtopless"><a href="{{ site.rule_page.url }}">Review the site rules</a></div>
+                          {% endif %}            
+                        </div>
+                      </div>
+
+                      <div class="form-submit"></div>
+                    {% endform_for %}
+                  </div>
+                  {% unless request.logged_in? %}
+
+                  <div class="user-session-form-container">
+
+                    {% include "user_session_form" %}
+
+                  </div>
+                  {% endunless %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if page.public_activities_count > 0 %}
+              <div id="reactions" class="content-list">
+                <ul id="page-stream" class="activities">
+                  <div class="row">
+                    {% for activity in page.activities %}
+                      <div class="col-md-6">
+                        {% include "activity_stream_card" %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </ul>
+                {{ page.activities | paginate prev_label: "Previous" next_label: "Next" | replace:'<div class="pagination">','<nav class="pagination-container">' | replace:'<ul>','<ul class="pagination">' | replace:'</div>','</nav>' }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="petition-photos"> 
+        {% if page.petition.is_image? and page.petition.signatures_with_images.size > 0 %}
+          {% for signature in page.petition.signatures_with_images limit:4 %}
+          <img src="{{ signature.large_square_image_url }}" height="140">
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="featured_endorsements"> 
+        <div class="reaction-wrap">
+          <div class="container">
+            {% if page.endorsement.featured_endorsements.size > 0 %}
+
+              {% if page.endorsement.is_image? %}
+
+                {% if page.endorsement.featured_endorsements_with_images.size > 0 %}
+                  <div class="padtop">
+                    {% for endorsement in page.endorsement.featured_endorsements_with_images %}
+                    <img src="{{ endorsement.large_square_image_url }}" border="0" height="140">
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <div class="padtop">
+                  {% if page.endorsement.featured_endorsements_without_images.size > 0 %}
+                    {% for endorsement in page.endorsement.featured_endorsements_without_images %}
+                      {% if endorsement.is_organization? %}
+                        <h6 class="strong endorser">
+                          {% if endorsement.signup.employer.size > 0 %}
+                          <span class="employer">{{ endorsement.signup.employer }}</span> -
+                          {% endif %}
+                          {{ endorsement.signup.published_name_linked }}{% if endorsement.signup.occupation.size > 0 %}, {{ endorsement.signup.occupation }}
+                          {% endif %}
+                        </h6>
+                      {% else %}
+                      <h6 class="strong endorser">{{ endorsement.signup.published_name_linked }}</h6>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </div>
+
+              {% else %}
+
+                <div class="padtop">
+                  {% for endorsement in page.endorsement.featured_endorsements %}
+                  {% if endorsement.is_organization? %}
+                  {{ endorsement.signup.employer }} - {{ endorsement.signup.published_name_linked }}, {{ endorsement.signup.occupation }}
+                  {% else %}
+                  {{ endorsement.signup.published_name_linked }}
+                  {% endif %}
+                  {% endfor %}
+                </div>
+
+              {% endif %}
+
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endif %}
+
+<script type="text/javascript">
+  $('#streamTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>

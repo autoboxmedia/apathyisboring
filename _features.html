@@ -1,0 +1,89 @@
+{% if page.features_count > 0 %}
+
+{% if page.features.size > 0 %}
+
+
+<div id="carousel-generic" class="carousel {% if site.has_background_image? %}carousel-bg {% endif %}slide" data-ride="carousel">
+
+  <div class="container">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      {% for feature in page.features %}
+      <div class="item {% if forloop.first == true %}active{% endif %}">
+        <div class="row">
+
+          <div class="{% if feature.headline.size > 0 %}col-sm-7 col-md-8{% else %}col-sm-12 full-feature{% endif %}">
+            {% if page.slug != feature.page.slug %}
+              <h1>{{ feature.name}}</h1>
+<!--<a href="{{ feature.page.url }}" class="carousel-image" style="background-image: url({{ feature.image_url }});"></a> -->
+            {% else %}
+              <div class="carousel-image" style="background-image: url({{ feature.image_url }});"></div>
+            {% endif %}
+          </div>
+
+          {% if feature.headline.size > 0 %}
+          <div class="col-sm-5 col-md-4">
+            <div class="carousel-caption">
+
+              <h5 class="strong">
+                {% if page.slug != feature.page.slug %}
+                  {{ feature.headline }}
+                {% else %}
+                  <span>{{ feature.headline }}</span>
+                {% endif %}
+              </h5>
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+        
+      </div>
+      {% endfor %}
+
+      {% if page.features.size > 1 %}
+
+      <!-- Indicators -->
+      <div class="row">
+      <div class="col-sm-5 col-md-4 col-sm-offset-7 col-md-offset-8">
+          <ol class="carousel-indicators">
+            {% for feature in page.features %}
+            <li data-target="#carousel-generic" data-slide-to="{{ forloop.index | minus:'1' }}" {% if forloop.first == true %}class="active"{% endif %}></li>
+            {% endfor %}
+          </ol> 
+        </div>
+      </div>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endif %}
+
+{% endif %}
+
+
+<style type="text/css">
+    .carousel-bg{
+      background-image: url({{ site.background_image_url }});
+    }
+</style>
+
+
+<script type="text/javascript" src="jquery.mobile.touch.min.js"></script>
+<script>
+  $(document).ready(function() {  
+       $("#carousel-generic").swiperight(function() {  
+          $(this).carousel('prev');  
+          });  
+       $("#carousel-generic").swipeleft(function() {  
+          $(this).carousel('next');  
+     });  
+  });  
+</script>

@@ -1,0 +1,7 @@
+{% if signup.profile_image_url contains 'facebook' %}
+	<a class="signup-icon" {% if signup.is_profile_published? %}href="{{ signup.profile_url }}"{% endif %} title="{{ signup.published_name }}"><img src="{{ signup.profile_image_url  | replace: '=73', '=255' }}"></a>
+{% elsif signup.profile_image_url contains 'twitter' %}
+ 	<a class="signup-icon" {% if signup.is_profile_published? %}href="{{ signup.profile_url }}"{% endif %} title="{{ signup.published_name }}"><img src="{{ signup.profile_image_url | replace: '_73', '_255' }}"></a>
+{% else %}
+	<a class="signup-icon" {% if signup.is_profile_published? %}href="{{ signup.profile_url }}"{% endif %} title="{{ signup.published_name }}"><img src="{{ signup.profile_image_url }}"></a>
+{% endif %}

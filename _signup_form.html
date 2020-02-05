@@ -1,0 +1,25 @@
+{% if request.logged_in? %}
+
+{% elsif request.sorta_logged_in? %}
+
+{% else %}
+
+	<div class="email-signup form">
+  {% form_for signup %}
+   {% hidden_field_tag "page_id", page.id %} <div class="form-errors">{% error_messages_for signup %}</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				{% email_field "email", class:"text form-control",  required: "required" %}	
+				<label>Email address</label>
+				<span class="input-group-btn">
+					{% submit_tag "Join", class:"submit-button btn btn-primary" %}
+				</span>
+			</div>
+		</div>
+
+	    <div class="form-submit"></div>
+  {% endform_for %}
+</div>
+
+{% endif %}

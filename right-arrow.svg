@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="M-Landing-Page" transform="translate(-134.000000, -580.000000)" fill="#FF4DFF" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(51.000000, 452.000000)">
+                <g id="Group-4" transform="translate(0.000000, 120.000000)">
+                    <g id="Group-3">
+                        <g id="icons8-arrows_long_right" transform="translate(83.000000, 8.000000)">
+                            <polygon id="Shape" points="11.435866 0 10.5002042 0.956454248 13.3487745 3.80502451 0 3.80502451 0 5.13574346 13.3487745 5.13574346 10.5002042 7.98431373 11.435866 8.94076797 15.90625 4.47038399"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

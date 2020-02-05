@@ -1,0 +1,14 @@
+<div class="card activity-stream-card equal">
+	<div class="activity">
+		{% assign signup = profile %}
+	  	{% include "signup_icon" %}
+	  	{{ post.activity.show }}
+
+	  	{% if post.activity.show_page? %}
+	    <div class="form-wrap page-{{ post.page.id }}">
+	      <h4><a href="{{ post.page.url | recruiter_url recruiter_id:profile.id }}">{{ post.page.headline }}</a></h4>
+	      {% include "page_profile" with post.page %}
+	    </div>
+    	{% endif %}
+	</div>
+</div>
