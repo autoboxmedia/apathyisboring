@@ -37,7 +37,7 @@
           <li class="{% if child.is_or_is_ancestor_of_current_page? %}active{% endif %} dropdown">
             <a href="{{ child.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ child.name }}</a>
             <ul class="dropdown-menu" role="menu">
-              <div class="container">
+              <div class="">
                 {% if site.show_parent_in_nav_dropdown? %}
                   <li><a href="{{ child.url }}">{{ child.name }}</a></li>
                 {% endif %}

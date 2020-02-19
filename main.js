@@ -36,7 +36,18 @@ $(document).ready(function() {
 
 aib = {
 		init: function() {
+			this.hoverNav();
 			this.devMode();
+		},
+		
+		hoverNav: function() {
+			if ($(window).width() < 768) return;
+			$('.navbar-nav li.dropdown > a, .navbar-nav .dropdown-menu').hover(function(){
+				$(this).parent().addClass('open');
+			},
+			function(){
+				$(this).parent().removeClass('open');
+			});
 		},
 		
 		devMode: function(){

@@ -1616,7 +1616,7 @@ a.splash-arrow:hover {
   	padding-top: 0;
   	text-align: left;
   	overflow: visible;
-  	position: static;
+  	//position: static;
 
   	>li {
   		position: static;
@@ -1722,7 +1722,7 @@ a.splash-arrow:hover {
 	  }
 	}
 	@media screen and (min-width: $screen-desktop){
-		top: 94.5px;
+		//top: 94.5px;
 	}
 
 }
@@ -4985,3 +4985,55 @@ select.form-control {
 		}
 	}
 }
+
+
+/*AUTOBOX MEDIA*/
+@media screen and (min-width: $screen-sm-min){
+
+.dropdown-menu {
+	//display: block !important;		//devmode: force open menus
+	max-width: 200px;
+}
+
+.navbar-nav > li {
+	position: relative;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+	padding: 0;
+	border: none;
+}
+
+.dropdown-menu {
+	display: block;
+	opacity: 0;
+	top: 1.5em;
+	margin: 0 -1em;
+	padding: 1em;
+	z-index: -1;
+	transition: opacity .5s;
+	
+	li {
+		padding: .3em 0;
+	}
+	
+	a {
+		color: $gray-darker;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.dropdown.open > .dropdown-menu {
+	opacity: 1;
+	z-index: 1;
+}
+
+}
+
+
+
+
+
