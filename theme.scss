@@ -12,6 +12,9 @@ $gray-lighter: #F3F6F7;
 $brand-primary: #0FE0B1;
 $brand-primary-lighter: lighten(desaturate(adjust-hue($brand-primary, 1.4928), 16.0191), 47.6471);
 
+$teal: $gray-base;
+$pink: #FF4DFF;
+
 // These stay the same in all the variations
 
 $brand-success: $brand-primary;
@@ -110,6 +113,8 @@ $btn-gray-color:                 $gray-darker;
 	}
   }
 }
+
+
 
 /* MARIA ADDITIONS */
 
@@ -4988,6 +4993,30 @@ select.form-control {
 
 
 /*AUTOBOX MEDIA*/
+ul.language-switch {
+	position: fixed;
+	bottom: 0;
+	left: 1.5em;
+	padding: .3em .5em;
+	border-radius: 5px 5px 0 0;
+	font-size: 20px;
+	background: $teal;
+	
+	&, li {
+		margin: 0;
+		list-style: none;
+	}
+	
+	a {
+		color: $gray-darker;
+		
+		&:hover {
+			text-decoration: none;
+			color: $pink;
+		}
+	}
+}
+
 @media screen and (min-width: $screen-sm-min){
 
 .dropdown-menu {
