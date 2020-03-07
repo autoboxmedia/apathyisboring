@@ -38,7 +38,7 @@
     
     
   </head>
-  <body class="aware-theme v2-theme {{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+  <body class="aware-theme v2-theme {{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} slug-{{ page.slug }} js">
 
     {% if page.is_homepage? and site.has_header_image? %}
       <div class="splash">

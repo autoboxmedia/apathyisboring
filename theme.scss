@@ -5017,6 +5017,24 @@ ul.language-switch {
 	}
 }
 
+.slug-about {
+	.about-subpages {
+		.container-blocks {
+			width: 100%;
+			padding-top: 0;
+			padding-bottom: 50px;
+		}
+	}
+}
+
+.slug-rise {
+	.rise-top {
+		.cities {
+			@include clearfix;
+		}
+	}
+}
+
 @media screen and (min-width: $screen-sm-min){
 
 .dropdown-menu {
