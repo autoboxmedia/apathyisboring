@@ -6505,6 +6505,13 @@ ol.CodeRay li {
 
 .vote-new .slides {
   padding-left: 0; }
+  .vote-new .slides li {
+    height: 540px; }
+    .vote-new .slides li img {
+      width: 100% !important;
+      height: 100% !important;
+      -o-object-fit: cover;
+         object-fit: cover; }
 
 .vote-new ol.flex-control-paging {
   list-style: none;
@@ -6906,8 +6913,10 @@ h2.pink-header {
 
 .not-home .col-md-8.canada-logos {
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
           justify-content: space-between;
   text-align: center; }
 
@@ -6935,12 +6944,6 @@ h2.pink-header {
   float: left;
   line-height: 30px; }
 
-.vote .block-links a {
-  padding-top: 15px; }
-  @media screen and (max-width: 768px) {
-    .vote .block-links a {
-      padding-top: 44px; } }
-
 .ambassadors table a {
   width: 100% !important;
   margin-right: 0 !important;
@@ -6967,21 +6970,26 @@ a.blocks, .block-links a, .ambassadors table a {
       line-height: 24px;
       margin-bottom: 20px; } }
 
-a.blocks:after, .block-links a:after, .ambassadors table a:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 60px;
-  content: '';
-  background-image: url("right-arrow.svg");
-  height: 20px;
-  background-repeat: no-repeat;
-  width: 20px;
-  margin: 0 auto; }
+.block-links a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding-top: 0; }
   @media screen and (max-width: 768px) {
-    a.blocks:after, .block-links a:after, .ambassadors table a:after {
-      bottom: 40px; } }
+    .block-links a {
+      padding-top: 0; } }
 
+/*a.blocks:after, .block-links a:after, .ambassadors table a:after {position: absolute;left: 0;right: 0;bottom: 60px;
+    content:'';
+    background-image: url('right-arrow.svg');height: 20px; background-repeat: no-repeat;width:20px;margin: 0 auto;
+  @media screen and (max-width: 768px) {bottom:40px;}
+}*/
 a.blocks:hover:after, .block-links a:hover:after, .ambassadors table a:hover:after {
   content: '';
   background-image: url("right-arrow-white.svg"); }
@@ -7179,8 +7187,6 @@ a[title="download"] {
   text-decoration: none; }
 
 a.img-container {
-  height: 170px;
-  overflow: hidden;
   display: block; }
 
 .content-pages-show-donation-v2-wide {
@@ -7340,11 +7346,16 @@ img {
   height: auto;
   margin-bottom: 10px;
   position: relative; }
+  @media screen and (max-width: 560px) {
+    .our-board a.blocks img {
+      width: 100%;
+      height: auto; } }
 
 .our-board a.blocks:after {
   display: none; }
 
 .our-board a.blocks:hover:after {
+  position: absolute;
   content: "";
   background-image: none;
   display: block;
@@ -7368,31 +7379,14 @@ img {
   width: 100%;
   background-image: none; }
 
-.our-board .col-md-4:nth-child(1),
-.our-board .col-md-4:nth-child(2),
-.our-board .col-md-4:nth-child(4),
-.our-board .col-md-4:nth-child(5),
-.our-board .col-md-4:nth-child(7),
-.our-board .col-md-4:nth-child(8),
-.our-board .col-md-4:nth-child(10),
-.our-board .col-md-4:nth-child(11),
-.our-board .col-md-4:nth-child(13),
-.our-board .col-md-4:nth-child(14),
-.our-board .col-md-4:nth-child(16) {
+.our-board .col-md-4 {
   margin-right: 3%; }
   @media screen and (max-width: 560px) {
-    .our-board .col-md-4:nth-child(1),
-    .our-board .col-md-4:nth-child(2),
-    .our-board .col-md-4:nth-child(4),
-    .our-board .col-md-4:nth-child(5),
-    .our-board .col-md-4:nth-child(7),
-    .our-board .col-md-4:nth-child(8),
-    .our-board .col-md-4:nth-child(10),
-    .our-board .col-md-4:nth-child(11),
-    .our-board .col-md-4:nth-child(13),
-    .our-board .col-md-4:nth-child(14),
-    .our-board .col-md-4:nth-child(16) {
+    .our-board .col-md-4 {
       margin-right: 0; } }
+
+.our-board .col-md-4:nth-child(3n) {
+  margin-right: 0; }
 
 .our-board .col-md-4 {
   padding: 0;
@@ -7869,6 +7863,12 @@ img {
   color: #000;
   text-decoration: underline; }
 
+.rise-top .block-links a {
+  color: #FF4DFF;
+  text-decoration: none; }
+  .rise-top .block-links a:hover {
+    color: white; }
+
 .homepage-excerpt .widget-page-type-signup .btn, .homepage-excerpt .widget-page-type-signup .radio-inline label.radio, .radio-inline .homepage-excerpt .widget-page-type-signup label.radio, .homepage-excerpt .widget-page-type-signup .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .homepage-excerpt .widget-page-type-signup label.radio, .homepage-excerpt .widget-page-type-signup .checkbox-inline label.radio, .checkbox-inline .homepage-excerpt .widget-page-type-signup label.radio, .homepage-excerpt .widget-page-type-signup .checkbox-inline input[type="checkbox"] + label, .checkbox-inline .homepage-excerpt .widget-page-type-signup input[type="checkbox"] + label, .homepage-excerpt .widget-page-type-signup .notice .modal-content .close, .notice .modal-content .homepage-excerpt .widget-page-type-signup .close {
   background: #000;
   color: #fff;
@@ -7939,14 +7939,19 @@ footer .follow-buttons.hidden-xs a:focus {
 
 #slider-video .container, #slider-video .splash .splash-background, .splash #slider-video .splash-background {
   display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
           flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: center;
+  -webkit-align-items: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
           justify-content: center; }
 
 a.gallery {
