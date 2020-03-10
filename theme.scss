@@ -12,7 +12,7 @@ $gray-lighter: #F3F6F7;
 $brand-primary: #0FE0B1;
 $brand-primary-lighter: lighten(desaturate(adjust-hue($brand-primary, 1.4928), 16.0191), 47.6471);
 
-$teal: $gray-base;
+$teal: #66ffcc;
 $pink: #FF4DFF;
 
 // These stay the same in all the variations
@@ -1939,7 +1939,7 @@ ul.homepage_excerpt-list {margin-bottom:0;}
 // --------------------------------------------------
 
 .modal-backdrop{
-	background-color: $gray-base;
+	background-color: $teal;
 }
 .modal-header{
 	border: 0;
@@ -2548,8 +2548,8 @@ input:checked + .slider:before {
 	.modal-body{
 	padding: 0;
 	.share-left{
-		background: $brand-info;
-		color: rgba(255,255,255,0.8);
+		background: $teal;
+		color: white;
 		padding: 36px 27px;
 		border-top-left-radius: 4.5px;
 		border-top-right-radius: 4.5px;
@@ -2580,7 +2580,7 @@ input:checked + .slider:before {
 		.share-left{
 			display: table-cell;
 			width: 50%;
-			background: $brand-info;
+			//background: $brand-info;
 			color: white;
 			border-bottom-left-radius: 4.5px;
 			border-top-right-radius: 0;
@@ -2600,7 +2600,7 @@ input:checked + .slider:before {
 	.modal-content{
 		padding: 18px 30px;
 		color: white;
-		background: $brand-primary;
+		background: $teal;
 		border: 0;
 	  text-align: center;
 		.modal-body{

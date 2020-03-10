@@ -9091,7 +9091,7 @@ ul.homepage_excerpt-list {
       bottom: 18px; } }
 
 .modal-backdrop {
-  background-color: #5EFFC9; }
+  background-color: #66ffcc; }
 
 .modal-header {
   border: 0;
@@ -9616,8 +9616,8 @@ input:checked + .slider:before {
 .flash-share .modal-body {
   padding: 0; }
   .flash-share .modal-body .share-left {
-    background: #00B4D9;
-    color: rgba(255, 255, 255, 0.8);
+    background: #66ffcc;
+    color: white;
     padding: 36px 27px;
     border-top-left-radius: 4.5px;
     border-top-right-radius: 4.5px;
@@ -9642,7 +9642,6 @@ input:checked + .slider:before {
     .flash-share .modal-body .share-left {
       display: table-cell;
       width: 50%;
-      background: #00B4D9;
       color: white;
       border-bottom-left-radius: 4.5px;
       border-top-right-radius: 0; }
@@ -9656,7 +9655,7 @@ input:checked + .slider:before {
 .notice .modal-content {
   padding: 18px 30px;
   color: white;
-  background: #0FE0B1;
+  background: #66ffcc;
   border: 0;
   text-align: center; }
   .notice .modal-content .modal-body {
@@ -11264,7 +11263,7 @@ ul.language-switch {
   padding: .3em .5em;
   border-radius: 5px 5px 0 0;
   font-size: 20px;
-  background: #5EFFC9; }
+  background: #66ffcc; }
   ul.language-switch, ul.language-switch li {
     margin: 0;
     list-style: none; }
