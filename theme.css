@@ -6868,6 +6868,10 @@ h2.pink-header {
 
 .ready-rise {
   padding-top: 70px; }
+  .ready-rise a {
+    display: block; }
+    .ready-rise a:hover {
+      text-decoration: none; }
 
 .ready-rise h2 {
   color: #FF4DFF; }

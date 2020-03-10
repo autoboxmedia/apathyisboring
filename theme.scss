@@ -312,7 +312,17 @@ background: transparent;color: black;    font-family: 'Greycliff-CF';font-size:2
 
 h2.pink-header {color:#FF4DFF; padding-top:40px;@media screen and (min-width: 768px) {padding-bottom:40px;}}
 
-.ready-rise {padding-top:70px;}
+.ready-rise {
+	padding-top: 70px;
+	
+	a {
+		display: block;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
 .ready-rise h2 {color:#FF4DFF;}
 .ready-rise .btn {color:#FF4DFF !important;background:#5EFFC9 !important;}
 .container.questions .white.rise h2 {line-height:42px;}
