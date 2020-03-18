@@ -45,26 +45,39 @@ aib = {
 	},
 	
 	init: function() {
-		this.hoverNav();
+		this.expandeableNav();
 		this.langControls();
 		this.devMode();
 	},
 	
-	hoverNav: function() {
-		if ($(window).width() < 768) return;
-		$('.navbar-nav li.dropdown > a, .navbar-nav .dropdown-menu').hover(function(){
-			$(this).parent().addClass('open');
-		},
-		function(){
-			$(this).parent().removeClass('open');
-		});
+	expandeableNav: function() {
+		if ($(window).width() < 768) {
+			$('.navbar-nav li.expandeable .expand-toggle').off('click').click(function(e){
+				e.preventDefault();
+				$(this).parent().toggleClass('open');
+			});
+		}
+		else {
+			$('.navbar-nav li.expandeable').hoverIntent({
+			over: function(){
+				$(this).addClass('open');
+			},
+			out: function(){
+				$(this).removeClass('open');
+			},
+			timeout: 500
+			});
+		}
+		
 	},
 	
 	devMode: function(){
 		var localDev = false;
 		var localUrl = 'https://aib:8890',
 			localCss = '/theme.css',
-			remoteCss = 'theme.scss';
+			remoteCss = 'theme.scss',
+			localJs = '/main.js',
+			remoteJs = 'main.js';
 		
 		$.ajax(localUrl + localCss, {
 			statusCode: {
@@ -73,10 +86,13 @@ aib = {
 				}
 			},
 			complete: function(r, status) {
-				if (status != 'success') return;
+				if (status != 'success' || document.aibDevMode) return;
+				document.aibDevMode = true;
 				$('head link[href*="'+ remoteCss +'"]').remove();
-				$('head').append('<link rel="stylesheet"  href="'+ localUrl + localCss +'" type="text/css" media="all">')
-				console.log('AiB: local css swapped in');
+				$('head').append('<link rel="stylesheet"  href="'+ localUrl + localCss +'" type="text/css" media="all">');
+				$('script[src*="'+ remoteJs +'"]').remove();
+				$('body').append('<script src="'+ localUrl + localJs +'" ></script>');
+				console.log('AiB: local assets swapped in');
 			}
 		});
 	},

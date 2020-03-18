@@ -16,17 +16,17 @@
 }
 
 // The dropdown wrapper (div)
-.dropdown {
+.dropdown, .expandeable {
   position: relative;
 }
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
-.dropdown-toggle:focus {
+.dropdown-toggle:focus, .expand-toggle:focus {
   outline: 0;
 }
 
 // The dropdown menu (ul)
-.dropdown-menu {
+.dropdown-menu, .expand-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -72,7 +72,7 @@
 }
 
 // Hover/Focus state
-.dropdown-menu > li > a {
+.dropdown-menu > li > a, .expand-menu > li > a {
   &:hover,
   &:focus {
     text-decoration: none;
@@ -82,7 +82,7 @@
 }
 
 // Active state
-.dropdown-menu > .active > a {
+.dropdown-menu > .active > a, .expand-menu > .active > a {
   &,
   &:hover,
   &:focus {
@@ -97,7 +97,7 @@
 //
 // Gray out text and ensure the hover/focus state remains gray
 
-.dropdown-menu > .disabled > a {
+.dropdown-menu > .disabled > a, .expand-menu > .disabled > a {
   &,
   &:hover,
   &:focus {
