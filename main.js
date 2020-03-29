@@ -107,7 +107,7 @@ aib = {
 	
 	getLang: function() {
 		var currentLang = 'en';
-		if (window.location.href.match(aib.settings.i18nURIFr)) currentLang = 'fr';
+		if (window.location.hostname.match(aib.settings.i18nURIFr)) currentLang = 'fr';
 		return currentLang;
 	},
 	
@@ -117,7 +117,7 @@ aib = {
 			var url;
 			if (this.getLang() == 'en') url = this.settings.i18nURIFr;
 			else url = this.settings.i18nURIEn;
-			window.location.pathname = url;
+			window.location.href = 'https://' + url;
 			return;
 		}
 		
