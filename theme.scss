@@ -429,8 +429,13 @@ a.blocks:hover:after,.block-links a:hover:after,.ambassadors table a:hover:after
     content:'';background-image: url('right-arrow-white.svg');
 }
 
-a.blocks:nth-child(3),a.blocks:nth-child(6),a.blocks:nth-child(9),a.blocks:nth-child(12),
-.block-links a:nth-child(3),.block-links a:nth-child(6),.block-links a:nth-child(9),.block-links a:nth-child(12){margin-right:0;}
+/*a.blocks:nth-child(3),a.blocks:nth-child(6),a.blocks:nth-child(9),a.blocks:nth-child(12), .block-links a:nth-child(3), .block-links a:nth-child(6), .block-links a:nth-child(9), .block-links a:nth-child(12) {
+	margin-right: 0;
+}*/
+
+a.blocks:nth-child(3n), .block-links a:nth-child(3n) {
+	margin-right: 0;
+}
 
 a.blocks:hover,.block-links a:hover,.ambassadors table a:hover {background:#FF4DFF;color:#fff;text-decoration:none;}
 
@@ -502,10 +507,33 @@ a[title="download"] {background: #000;color: #fff !important;text-decoration:non
     height: 28px !important;float:left;}
 
 
-.archive-links .col-sm-6 {padding:0;margin-bottom:50px;@media screen and (min-width: 768px){width:47%;}}
-.archive-links .col-sm-6:nth-child(even) {@media screen and (min-width: 768px){float:right;}}
-.archive-links h3 {color:#FF4DFF;}
-.archive-links .btn {background:#000;color:#fff;text-decoration:none;}
+.archive-links .col-sm-6 {
+	padding: 0;
+	margin-bottom: 50px;
+		@media screen and (min-width: 768px) {
+		width: 47%;
+	}
+	
+	&:nth-child(3n) {
+		clear: left;
+	}
+}
+
+.archive-links .col-sm-6:nth-child(even) {
+	@media screen and (min-width: 768px) {
+		float: right;
+	}
+}
+
+.archive-links h3 {
+	color: #FF4DFF;
+}
+
+.archive-links .btn {
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
 
 a.img-container {
 	//height: 170px;
@@ -5102,10 +5130,7 @@ ul.language-switch {
 	position: fixed;
 	bottom: 0;
 	left: 1.5em;
-	padding: .3em .5em;
-	border-radius: 5px 5px 0 0;
-	font-size: 20px;
-	background: $teal;
+	
 	
 	&, li {
 		margin: 0;
@@ -5113,6 +5138,11 @@ ul.language-switch {
 	}
 	
 	a {
+		display: block;
+		padding: .3em .5em;
+		border-radius: 5px 5px 0 0;
+		font-size: 20px;
+		background: $teal;
 		color: $gray-darker;
 		
 		&:hover {
@@ -5120,6 +5150,14 @@ ul.language-switch {
 			color: $pink;
 		}
 	}
+}
+
+.hero {
+	padding: 15vw 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
 }
 
 .slug-about {
@@ -5136,6 +5174,22 @@ ul.language-switch {
 	.rise-top {
 		.cities {
 			@include clearfix;
+		}
+	}
+}
+
+.slug-home {
+	.home-videos {
+		margin-left: -30px;
+		margin-right: -30px;
+		
+		.block {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		a {
+			max-width: 100%;
 		}
 	}
 }
