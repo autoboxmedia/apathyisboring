@@ -8223,7 +8223,8 @@ a:focus {
   .sub-footer .col-sm-12 {
     padding: 0; }
   #menu-collapse {
-    width: 700px;
+    width: auto;
+    max-width: 700px;
     float: left;
     margin-left: 40px;
     margin-top: 50px; } }

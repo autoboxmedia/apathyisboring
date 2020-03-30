@@ -1038,7 +1038,13 @@ a:focus {outline:none !important;text-decoration:none !important;}
 
 @media screen and (min-width: $screen-tablet){
   .sub-footer .col-sm-12 {padding:0;}
-  #menu-collapse {width: 700px;float: left;margin-left: 40px;margin-top: 50px;}
+  #menu-collapse {
+  	width: auto;
+  	max-width: 700px;
+  	float: left;
+  	margin-left: 40px;
+  	margin-top: 50px;
+  }
 }
 input[type="submit"] {
 @media screen and (min-width: $screen-tablet){
