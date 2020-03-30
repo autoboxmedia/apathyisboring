@@ -6506,7 +6506,7 @@ ol.CodeRay li {
 .vote-new .slides {
   padding-left: 0; }
   .vote-new .slides li {
-    height: 540px; }
+    height: 494px; }
     .vote-new .slides li img {
       width: 100% !important;
       height: 100% !important;
@@ -7393,7 +7393,7 @@ img {
     .our-board .col-md-4 {
       margin-right: 0; } }
 
-.our-board .col-md-4:nth-child(3n) {
+.our-board .col-md-4:nth-of-type(3n) {
   margin-right: 0; }
 
 .our-board .col-md-4 {
@@ -8223,7 +8223,7 @@ a:focus {
   .sub-footer .col-sm-12 {
     padding: 0; }
   #menu-collapse {
-    width: 500px;
+    width: 700px;
     float: left;
     margin-left: 40px;
     margin-top: 50px; } }
@@ -11318,33 +11318,46 @@ ul.language-switch {
 @media screen and (min-width: 768px) {
   .navbar-nav > li {
     position: relative; }
+    .navbar-nav > li > a {
+      margin-right: 0;
+      padding: 0 7.5px 3px; }
+      .navbar-nav > li > a:hover {
+        background: black;
+        color: white; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    padding: 0;
+    padding: 0 7.5px 3px;
     border: none; }
+  .nav .open > a:hover {
+    background: black;
+    color: white; }
   .expandeable .expand-toggle {
     display: none; }
   .expand-menu {
     display: block;
     max-width: 200px;
     opacity: 0;
-    top: 1.5em;
+    top: 23px;
     margin: 0 -1em;
-    padding: 1em;
+    padding: 1em 0;
     z-index: -1;
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
     /*display: block !important;		
 	opacity: 1 !important;
 	z-index: 100 !important;*/ }
-    .expand-menu li {
-      padding: .3em 0; }
     .expand-menu a {
+      display: block;
+      padding: .3em 1em;
       color: #000; }
       .expand-menu a:hover {
-        text-decoration: none; }
+        text-decoration: none;
+        background: black;
+        color: white; }
   .expandeable.open > .expand-menu {
     opacity: 1;
-    z-index: 1; } }
+    z-index: 1; }
+  .dropdown-menu li:last-child a, .expand-menu li:last-child a {
+    padding-bottom: .3em !important; } }
 
 @media screen and (max-width: 768px) {
   .navbar-nav {

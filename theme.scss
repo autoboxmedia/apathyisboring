@@ -141,7 +141,7 @@ $btn-gray-color:                 $gray-darker;
 	padding-left: 0;
 	
 	li {
-		height: 540px;
+		height: 494px;
 		
 		img {
 			width: 100% !important;
@@ -660,7 +660,7 @@ content:'';
 	@media screen and (max-width: 560px){margin-right:0;}
 }
 
-.our-board .col-md-4:nth-child(3n) 
+.our-board .col-md-4:nth-of-type(3n) 
 {
 	margin-right:0;
 	
@@ -1038,7 +1038,7 @@ a:focus {outline:none !important;text-decoration:none !important;}
 
 @media screen and (min-width: $screen-tablet){
   .sub-footer .col-sm-12 {padding:0;}
-  #menu-collapse {width: 500px;float: left;margin-left: 40px;margin-top: 50px;}
+  #menu-collapse {width: 700px;float: left;margin-left: 40px;margin-top: 50px;}
 }
 input[type="submit"] {
 @media screen and (min-width: $screen-tablet){
@@ -5202,11 +5202,26 @@ ul.language-switch {
 
 .navbar-nav > li {
 	position: relative;
+	
+	> a {
+		margin-right: 0;
+		padding: 0 7.5px 3px;
+		
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-	padding: 0;
+	padding: 0 7.5px 3px;
 	border: none;
+}
+
+.nav .open > a:hover {
+	background: black;
+	color: white;
 }
 
 .expandeable {
@@ -5219,9 +5234,9 @@ ul.language-switch {
 	display: block;
 	max-width: 200px;
 	opacity: 0;
-	top: 1.5em;
+	top: 23px;
 	margin: 0 -1em;
-	padding: 1em;
+	padding: 1em 0;
 	z-index: -1;
 	transition: opacity .5s;
 	
@@ -5231,14 +5246,18 @@ ul.language-switch {
 	z-index: 100 !important;*/
 	
 	li {
-		padding: .3em 0;
+		
 	}
 	
 	a {
+		display: block;
+		padding: .3em 1em;
 		color: $gray-darker;
 		
 		&:hover {
 			text-decoration: none;
+			background: black;
+			color: white;
 		}
 	}
 }
@@ -5246,6 +5265,10 @@ ul.language-switch {
 .expandeable.open > .expand-menu {
 	opacity: 1;
 	z-index: 1;
+}
+
+.dropdown-menu li:last-child a, .expand-menu li:last-child a {
+	padding-bottom: .3em !important;
 }
 
 // /bp min-desktop
