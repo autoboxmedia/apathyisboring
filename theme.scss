@@ -2695,6 +2695,8 @@ input:checked + .slider:before {
 		font-size: 13.5px;
 		h2{
 			color: white;
+			font-size: 24px;
+			line-height: 31px;
 		}
 		img{
 			margin-bottom: 18px;
@@ -2713,11 +2715,11 @@ input:checked + .slider:before {
   }
   @media screen and (min-width: $screen-sm-min){
 	.modal-body{
-		display: table;
+		display: flex;
 		width: 100%;
 		padding: 0;
 		.share-left{
-			display: table-cell;
+			//display: table-cell;
 			width: 50%;
 			//background: $brand-info;
 			color: white;
@@ -2725,7 +2727,7 @@ input:checked + .slider:before {
 			border-top-right-radius: 0;
 		}
 		.share-right{
-			display: table-cell;
+			//display: table-cell;
 			width: 50%;
 		}
 	  }

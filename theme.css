@@ -9637,7 +9637,9 @@ input:checked + .slider:before {
     border-top-right-radius: 4.5px;
     font-size: 13.5px; }
     .flash-share .modal-body .share-left h2 {
-      color: white; }
+      color: white;
+      font-size: 24px;
+      line-height: 31px; }
     .flash-share .modal-body .share-left img {
       margin-bottom: 18px; }
   .flash-share .modal-body .share-right {
@@ -9650,17 +9652,17 @@ input:checked + .slider:before {
 
 @media screen and (min-width: 768px) {
   .flash-share .modal-body {
-    display: table;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
     width: 100%;
     padding: 0; }
     .flash-share .modal-body .share-left {
-      display: table-cell;
       width: 50%;
       color: white;
       border-bottom-left-radius: 4.5px;
       border-top-right-radius: 0; }
     .flash-share .modal-body .share-right {
-      display: table-cell;
       width: 50%; } }
 
 .notice .modal-dialog {

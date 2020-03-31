@@ -40,8 +40,8 @@ aib = {
 	settings: {
 		i18nURL: 'https://aibi18n.autoboxdev.com?q=switchurl',
 		i18nbase: window.location.href,
-		i18nURIEn: 'aibautobox-autobox.nationbuilder.com',
-		i18nURIFr: 'aibautoboxfr-autobox.nationbuilder.com'
+		i18nURIEn: 'endev-apathyisboring.nationbuilder.com',
+		i18nURIFr: 'frdev-apathyisboring.nationbuilder.com'
 	},
 	
 	init: function() {
