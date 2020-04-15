@@ -6930,8 +6930,7 @@ h2.pink-header {
 
 .block-links .container-blocks {
   padding-top: 40px;
-  padding-bottom: 0;
-  float: left; }
+  padding-bottom: 0; }
   @media screen and (max-width: 768px) {
     .block-links .container-blocks {
       padding-top: 15px; } }

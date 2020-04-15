@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 aib = {
 	settings: {
-		i18nURL: 'https://aibi18n.autoboxdev.com?q=switchurl',
+		i18nURL: 'https://i18n.apathyisboring.com/switchurl',
 		i18nbase: window.location.href,
 		i18nURIEn: 'endev-apathyisboring.nationbuilder.com',
 		i18nURIFr: 'frdev-apathyisboring.nationbuilder.com'
@@ -123,7 +123,7 @@ aib = {
 		
 		$.ajax({
 			type: "GET",
-			url: aib.settings.i18nURL + "&url=" + window.location.href,
+			url: aib.settings.i18nURL + "?url=" + window.location.href,
 			success: function(msg){
 				var data = $.parseJSON(msg);
 				if (data.urls.length) {

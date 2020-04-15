@@ -1,4 +1,5 @@
 <!-- CUSTOM RISE SUB PAGES FOR CITIES   -->
+PARENT SLUG: {{ page.parent.slug }}
 {% if page.parent.slug == "rise" or page.parent.slug == "agir"%}
 
 {% capture body %}{{ page.basic.content }}{% endcapture %}
@@ -15,37 +16,27 @@
       
       <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ambassadors">
         <div id="content">
-<!-- First grid of bios/headshots -->
+
 {{ body_parts[0] }}
         </div></div></div></div>
 
 <div class="container questions not-home">
            <div class="row pink reg rise-project">
              <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="color:white;">
-<!-- Pink box, ie. "Their project" -->
  {{ body_parts[1] }}
 
   </div></div></div>
 
- <div class="container not-home vote">
-    <div class="row">
-      
-      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ambassadors">
-        <div id="content">
-<!-- Second grid of bios/headshots -->
-{{ body_parts[2] }}
-        </div></div></div></div>
 
 <div class="container questions">
            <div class="row green">
-<!-- Green box, ie. "Want to know more?" -->
- {{ body_parts[3] }}
+ {{ body_parts[2] }}
 
         </div></div>
 
 
 <!-- CUSTOM CAREER LISTINGS SUB PAGES FOR CAREERS PAGE   -->
-{% elsif page.parent.slug == "careers" or page.parent.slug == "emplois" %}
+{% elsif page.parent.slug == "careers" %}
 {% capture body %}{{ page.basic.content }}{% endcapture %}
 {% assign body_parts = body | split: '-SPLIT-' %} 
 
@@ -67,7 +58,7 @@
   </div></div>
 
 <!-- CUSTOM CAREERS PAGE   -->
-{% elsif page.slug == "careers" or page.slug == "emplois" %}
+{% elsif page.slug == "careers" %}
 {% capture body %}{{ page.basic.content }}{% endcapture %}
 {% assign body_parts = body | split: '-SPLIT-' %} 
 <div class="container not-home careers-listing">
@@ -98,7 +89,7 @@
 
 
 <!-- CUSTOM BOARD MEMBER PAGE   -->
-{% elsif page.parent.slug == "our-board" or page.parent.slug == "notre_ca" %}
+{% elsif page.parent.slug == "our-board" %}
 
   <div class="container questions not-home careers-listing board-members">
            <div class="row green reg">
@@ -118,7 +109,7 @@
 
 
 <!-- CUSTOM TEAM MEMBER PAGE   -->
-{% elsif page.parent.slug == "our-team" or page.parent.slug == "notre_equipe" %}
+{% elsif page.parent.slug == "our-team" %}
 
   <div class="container questions not-home careers-listing board-members team-members">
            <div class="row white reg">
@@ -139,7 +130,7 @@
 
 
 <!-- CUSTOM RESOURCES PAGE   -->
-{% elsif page.parent.slug == "resources" or page.parent.slug == "outils" %}
+{% elsif page.parent.slug == "resources" %}
 <div class="container not-home">
 <div class="row">
 <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 res-single">
