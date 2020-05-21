@@ -1001,7 +1001,11 @@ span.red {color:#FF4DFF;font-size:12px;padding-bottom: 20px;display: inline-bloc
 .fixed {    width: 100%;position: fixed; bottom: 0;background:#F4F4F4;z-index:9;}
 p.copyright {text-align:left;color:#9B9B9B;font-size:8px;}
 p.copyright a{color:#9B9B9B;}
-.pink {background:#FF4DFF;padding:40px 0;}
+.pink {
+	background: #FF4DFF;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 .pink .btn {margin:0 auto !important;display:table !important;} 
 .sub-footer p {font-size:12px;}
 .sub-footer a {font-weight:bold; color:#000;
@@ -5183,6 +5187,15 @@ ul.language-switch {
 		.cities {
 			@include clearfix;
 		}
+	}
+}
+
+.home-videos {
+	/*margin-left: -30px;
+	margin-right: -30px;*/
+	
+	a {
+		max-width: 100%;
 	}
 }
 

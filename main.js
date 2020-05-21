@@ -40,8 +40,8 @@ aib = {
 	settings: {
 		i18nURL: 'https://i18n.apathyisboring.com/switchurl',
 		i18nbase: window.location.href,
-		i18nURIEn: 'endev-apathyisboring.nationbuilder.com',
-		i18nURIFr: 'frdev-apathyisboring.nationbuilder.com'
+		i18nURIEn: 'apathyisboring.com',
+		i18nURIFr: 'lapathiecestplate.com'
 	},
 	
 	init: function() {

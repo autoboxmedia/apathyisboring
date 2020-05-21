@@ -2,30 +2,22 @@
 	<a class="btn btn-primary" href="{{ site.donation_page.url }}" title="{{ site.donation_page.headline}}">{{ site.donation_page.name }}</a>
 {% endif %}
 
-	<!--	<a class="btn btn-default" href="/join_rise" title="JOIN RISE">JOIN RISE</a> -->
-
-
-	<div class="follow-buttons hidden-xs rise-buttons">
-		<h6 class="accent strong">Join:</h6>
-		
-    <a href="/application_closed"><img src="rise_black_small.svg"></a>
-		
-    <a href="/vote"><img src="vote_black_small.svg"></a>
-    
-	</div>
-
-
-	
-{% if site.broadcaster.has_facebook? or site.broadcaster.has_twitter? %}
 	<div class="follow-buttons hidden-xs">
-    <a href="/donate" class="donate">DONATE</a> 
+		
+		{% assign url = page.full_url | split: '/' %}
+		{% if url[2] contains 'lapathie' %}
+		
+		<a href="/donate" class="donate">DONNER</a> 
+		<h6 class="accent strong">Suivez-Nous:</h6>
+		
+		{% else %}
+		
+		<a href="/donner" class="donate">SUPPORT</a> 
 		<h6 class="accent strong">Follow:</h6>
-		{% if site.broadcaster.has_facebook? %}
-			<a href="{{ site.broadcaster.facebook_page_profile_url }}" target="_blank" ><i class="icon-facebook"></i></a>
+		
 		{% endif %}
-		{% if site.broadcaster.has_twitter? %}
-			<a href="{{ site.broadcaster.twitter_profile_url }}" target="_blank" ><i class="icon-twitter"></i></a>
-		{% endif %}
+		
+    <a href="https://www.facebook.com/apathyisboring" target="_blank" ><i class="icon-facebook"></i></a>
+		<a href="https://www.twitter.com/apathyisboring" target="_blank" ><i class="icon-twitter"></i></a>
     <a href="https://www.instagram.com/apathyisboring/" target="_blank" class="instagram"><img src="Instagram-Logo.png"></a>
 	</div>
-{% endif %}
