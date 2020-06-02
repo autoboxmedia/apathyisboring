@@ -138,6 +138,17 @@ aib = {
 				aib.switchLang(true);
 			}
 		});
+	},
+	
+	/**
+	 * @limit: times to show before ignore
+	*/
+	showNewbieModal: function(cookieName, limit, cb) {
+		let lmt = Cookies.get(cookieName);
+		let currentLimit = lmt ? lmt : 0;
+		if (currentLimit >= limit) return;
+		Cookies.set(cookieName, ++currentLimit);
+		cb();
 	}
 }
 
