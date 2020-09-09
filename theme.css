@@ -7459,7 +7459,7 @@ justify-content: center;*/
       width: 100%;
       margin-top: 30px; } }
 
-.our-board a.blocks {
+.our-board a.blocks, .grid-photo-link a {
   padding: 0;
   border: 0;
   width: 100%;
@@ -7467,14 +7467,17 @@ justify-content: center;*/
   margin-bottom: 10px;
   position: relative; }
   @media screen and (max-width: 560px) {
-    .our-board a.blocks img {
+    .our-board a.blocks img, .grid-photo-link a img {
       width: 100%;
       height: auto; } }
 
-.our-board a.blocks:after {
+.grid-photo-link a {
+  display: block; }
+
+.our-board a.blocks:after, .grid-photo-link area:after {
   display: none; }
 
-.our-board a.blocks:hover:after {
+.our-board a.blocks:hover:after, .grid-photo-link a:hover:after {
   position: absolute;
   content: "";
   background-image: none;
@@ -7499,24 +7502,44 @@ justify-content: center;*/
   width: 100%;
   background-image: none; }
 
-.our-board .col-md-4 {
+.our-board .col-md-4, .grid-photo-link .col-md-4 {
   margin-right: 3%; }
   @media screen and (max-width: 560px) {
-    .our-board .col-md-4 {
+    .our-board .col-md-4, .grid-photo-link .col-md-4 {
       margin-right: 0; } }
 
-.our-board .col-md-4:nth-of-type(3n) {
-  margin-right: 0; }
-
-.our-board .col-md-4 {
+.our-board .col-md-4, .grid-photo-link .col-md-4 {
   padding: 0;
   margin-bottom: 25px;
   width: 30%;
   float: left; }
   @media screen and (max-width: 560px) {
-    .our-board .col-md-4 {
+    .our-board .col-md-4, .grid-photo-link .col-md-4 {
       width: 100%; } }
 
+.grid-photo-link td {
+  padding: 0;
+  margin-bottom: 25px;
+  width: 30% !important;
+  float: left;
+  margin-right: 3%; }
+  .grid-photo-link td span {
+    display: block; }
+  .grid-photo-link td p {
+    margin-bottom: 0; }
+  @media screen and (max-width: 560px) {
+    .grid-photo-link td {
+      width: 100% !important;
+      margin-right: 0; }
+      .grid-photo-link td img {
+        width: 100%; } }
+
+.our-board .col-md-4:nth-of-type(3n), .grid-photo-link tr td:last-child {
+  margin-right: 0; }
+
+@media screen and (min-width: 724px) {
+  .our-board .col-md-4:nth-of-type(3n + 4), .grid-photo-link .col-md-4:nth-of-type(3n + 4) {
+    clear: left; } }
 @media screen and (min-width: 768px) {
   .board-questions {
     padding: 120px 0 !important; } }

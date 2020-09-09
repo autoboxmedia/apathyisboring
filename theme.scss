@@ -433,7 +433,8 @@ a.blocks:hover:after,.block-links a:hover:after,.ambassadors table a:hover:after
 	margin-right: 0;
 }*/
 
-a.blocks:nth-child(3n), .block-links a:nth-child(3n) {
+a.blocks:nth-child(3n), .block-links a:nth-child(3n)
+ {
 	margin-right: 0;
 }
 
@@ -620,7 +621,7 @@ content:'';
 .board-members .col-sm-12.col-md-8 {width:50%;padding:0;float:left;
   @media screen and (max-width: 560px){width:100%;margin-top:30px;}}
 
-.our-board a.blocks {
+.our-board a.blocks, .grid-photo-link a {
 	padding: 0;
 	border: 0;
 	width: 100%;
@@ -635,9 +636,14 @@ content:'';
 		}
 	}
 }
-.our-board a.blocks:after {display:none;}
 
-.our-board a.blocks:hover:after {
+.grid-photo-link a {
+	display: block;
+}
+
+.our-board a.blocks:after, .grid-photo-link area:after {display:none;}
+
+.our-board a.blocks:hover:after, .grid-photo-link a:hover:after {
 	position: absolute;
     content:"";
     background-image:none;
@@ -654,19 +660,60 @@ content:'';
     border:6px solid #5EFFC9 !important;width:100%;background-image:none;
 }
 
-.our-board .col-md-4 {
+.our-board .col-md-4, .grid-photo-link .col-md-4 {
 	margin-right:3%;
 	
 	@media screen and (max-width: 560px){margin-right:0;}
 }
 
-.our-board .col-md-4:nth-of-type(3n) 
+
+.our-board .col-md-4, .grid-photo-link .col-md-4 {
+	padding: 0;
+	margin-bottom: 25px;
+	width: 30%;
+	float: left;
+	@media screen and (max-width: 560px) {
+		width: 100%;
+	}
+}
+
+.grid-photo-link td {
+	padding: 0;
+	margin-bottom: 25px;
+	width: 30% !important;
+	float: left;
+	margin-right:3%;
+
+	span {
+		display: block;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 560px) {
+		width: 100% !important;
+		margin-right:0;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.our-board .col-md-4:nth-of-type(3n) , .grid-photo-link tr td:last-child 
 {
 	margin-right:0;
 	
 }
-.our-board .col-md-4 {padding:0;margin-bottom:25px;width:30%;float:left;
-  @media screen and (max-width: 560px){width:100%;}}
+
+@media screen and (min-width: 724px) {
+	.our-board .col-md-4:nth-of-type(3n + 4), .grid-photo-link .col-md-4:nth-of-type(3n + 4) {
+		clear: left;
+	}
+	
+}
 
 .board-questions {@media screen and (min-width: 768px){padding:120px 0 !important;}}
 .board-questions h2 {color:#FF4DFF;}
