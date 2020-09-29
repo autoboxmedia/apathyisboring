@@ -677,6 +677,12 @@ content:'';
 	}
 }
 
+.grid-photo-link {
+	tr, td {
+		height: auto !important;
+	}
+}
+
 .grid-photo-link td {
 	padding: 0;
 	margin-bottom: 25px;
