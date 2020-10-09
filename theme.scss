@@ -2647,6 +2647,16 @@ input[type="checkbox"] {
   }
 }
 
+#modal_signup_page_new_signup_form {
+	select ~ label {
+		font-size: 14px;
+	}
+
+	.signup-tags {
+		display: none;
+	}
+}
+
 // Toggle switches on the flash share
 
 /* The switch - the box around the slider */

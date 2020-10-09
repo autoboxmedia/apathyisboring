@@ -17,7 +17,7 @@
         </button>
       </div>
       <div class="modal-body">
-        {% subpage "join" with "signup_form" %}
+        {% subpage "modal_signup" with "modal_signup_form" %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ str_close }}</button>
@@ -30,7 +30,10 @@
     
     $(function(){
 	    if (aib.showNewbieModal) {
-		    aib.showNewbieModal('feedSignup', 3, function() {$('#signupModalCenter').modal('show');});
+		    aib.showNewbieModal('feedSignup', 3, function() {
+          $('#signupModalCenter').modal('show');
+          aib.linkSignupModalTags();
+        });
 	    } else {
 		    console.log('main aib js not loaded')
 	    }

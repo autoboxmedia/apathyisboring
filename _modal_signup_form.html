@@ -1,0 +1,42 @@
+
+
+
+{% assign str_join = "Join" %}
+{% assign str_email = "Email address" %}
+{% assign str_close = "Close" %}
+{% assign url = page.full_url | split: '/' %}
+{% if url[2] contains 'lapathie' %}
+	{% assign str_join = "Enregistrer" %}
+	{% assign str_email = "Courriel" %}
+	{% assign str_close = "Fermer" %}
+{% endif %}
+
+	<div class="email-signup form">
+  {% form_for signup %}
+   {% hidden_field_tag "page_id", page.id %} <div class="form-errors">{% error_messages_for signup %}</div>
+   		<h4>{{ page.headline }}</h4>
+		<div class="form-group">
+			<div class="input-group">
+				{% email_field "email", class:"text form-control",  required: "required" %}	
+				<label>{{ str_email }}</label>
+
+				<div class="row-fluid">
+					{% include "home_address_province_dropdown" %}
+					</div>
+
+				<div class="signup-tags">
+					{% if page.signup.has_labeled_tags? %}
+						{% include "labeled_tags" %}
+					{% endif %}
+				</div>
+				<span class="input-group-btn">
+					{% submit_tag str_join, class:"submit-button btn btn-primary" %}
+				</span>
+			</div>
+		</div>
+
+	    <div class="form-submit"></div>
+  {% endform_for %}
+</div>
+
+

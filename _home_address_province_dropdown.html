@@ -1,0 +1,56 @@
+{% assign str_ab = "Alberta" %}
+{% assign str_bc = "British Columbia" %}
+{% assign str_mb = "Manitoba" %}
+{% assign str_nb = "New Brunswick" %}
+{% assign str_nf = "Newfoundland & Labrador" %}
+{% assign str_nt = "Northwest Territories" %}
+{% assign str_ns = "Nova Scotia" %}
+{% assign str_nu = "Nunavut" %}
+{% assign str_on = "Ontario" %}
+{% assign str_pe = "Prince Edward Island" %}
+{% assign str_qc = "Quebec" %}
+{% assign str_sk = "Saskatchewan" %}
+{% assign str_yt = "Yukon Territory" %}
+{% assign str_label = "Province/Territory" %}
+
+{% assign str_close = "Close" %}
+
+{% assign url = page.full_url | split: '/' %}
+{% if url[2] contains 'lapathie' %}
+{% assign str_ab = "Alberta" %}
+{% assign str_bc = "Colombie-Britannique" %}
+{% assign str_mb = "Manitoba" %}
+{% assign str_nb = "Nouveau-Brunswick" %}
+{% assign str_nf = "Terre-Neuve-et-Labrador" %}
+{% assign str_nt = "Les Territoires du Nord-Ouest" %}
+{% assign str_ns = "Nouvelle-Écosse" %}
+{% assign str_nu = "Nunavut" %}
+{% assign str_on = "Ontario" %}
+{% assign str_pe = "Île-du-Prince-Édouard" %}
+{% assign str_qc = "Quebec" %}
+{% assign str_sk = "Saskatchewan" %}
+{% assign str_yt = "Yukon" %}
+{% assign str_label = "Province/Territoire" %}
+  
+	{% assign str_close = "Fermer" %}
+{% endif %}
+
+<div class="span4">
+          <select id="signup_home_address_prov" class="form-control" name="signup[home_address_attributes][state]" required="required">
+            <option value="" selected="selected"></option>
+            <option value="AB">{{ str_ab }}</option>
+            <option value="BC">{{ str_bc }}</option>
+            <option value="MB">{{ str_mb }}</option>
+            <option value="NB">{{ str_nb }}</option>
+            <option value="NL">{{ str_nf }}</option>
+            <option value="NT">{{ str_nt }}</option>
+            <option value="NS">{{ str_ns }}</option>
+            <option value="NU">{{ str_nu }}</option>
+            <option value="ON">{{ str_on }}</option>
+            <option value="PE">{{ str_pe }}</option>
+            <option value="QC">{{ str_qc }}</option>
+            <option value="SK">{{ str_sk }}</option>
+            <option value="YT">{{ str_yt }}</option>
+          </select>
+          <label for="signup_home_address_prov">{{ str_label }}</label>
+          </div>

@@ -147,8 +147,24 @@ aib = {
 		let lmt = Cookies.get(cookieName);
 		let currentLimit = lmt ? lmt : 0;
 		if (currentLimit >= limit) return;
-		Cookies.set(cookieName, ++currentLimit);
+		Cookies.set(cookieName, ++currentLimit, { expires: 30 });
 		cb();
+	},
+
+	linkSignupModalTags: function() {
+		const tags = $('.signup-tags');
+		const provPicker = $('select#signup_home_address_prov');
+		provPicker.change(function(){
+			const val = $(':selected', this).text();
+			console.log('val is ' + val);
+			const prov = tags.find('input[type=radio]').filter(function(){
+				const label = $(this).siblings('label').text();
+				if (val.match(label)) return true;
+			});
+			if (prov) {
+				prov.prop("checked", true);
+			}
+		});
 	}
 }
 
