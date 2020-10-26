@@ -47,7 +47,7 @@ aib = {
 	init: function() {
 		this.expandeableNav();
 		this.langControls();
-		this.devMode();
+		//this.devMode();
 	},
 	
 	expandeableNav: function() {

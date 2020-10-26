@@ -5498,6 +5498,12 @@ ul.language-switch {
 	
 }
 
+#the_feed_sign_up_page_new_signup_form {
+	.signup-tags, label[for=signup_home_address_prov] {
+		display: none;
+	}
+}
+
 
 
 

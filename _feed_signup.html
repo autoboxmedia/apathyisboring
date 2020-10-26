@@ -20,14 +20,23 @@
                 <p>Email <span class="red">*</span></p>
                 <div class="required_field">Please enter valid information.</div>
                 {% email_field "email", class:"text form-control wc_required", required: "required" %}</div></div>
+
+                <div class="col-md-12"><div class="form-group">
+                <p>Province <span class="red">*</span></p>
+                <div class="required_field">Please enter valid information.</div>
+                {% include "home_address_province_dropdown" %}
+                </div></div>
             </div>
           {% endif %}
 
 
 
-          {% if page.signup.has_labeled_tags? %}
-            {% include "labeled_tags" %}
-          {% endif %}
+          <div class="signup-tags">
+            {% if page.signup.has_labeled_tags? %}
+              {% include "labeled_tags" %}
+            {% endif %}
+          </div>
+          
 
 
           {% if page.signup.is_all_info_collected? == false %}
@@ -43,3 +52,9 @@
       </div>
           {% endform_for %}
       </div>
+
+      <script type="text/javascript">
+        $(function(){
+          aib.linkSignupModalTags();
+        });
+      </script>

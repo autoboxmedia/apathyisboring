@@ -11597,3 +11597,6 @@ ul.language-switch {
   vertical-align: top; }
   .modal-content .input-group-btn .btn, .modal-content .input-group-btn .radio-inline label.radio, .radio-inline .modal-content .input-group-btn label.radio, .modal-content .input-group-btn .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-content .input-group-btn label.radio, .modal-content .input-group-btn .checkbox-inline label.radio, .checkbox-inline .modal-content .input-group-btn label.radio, .modal-content .input-group-btn .checkbox-inline input[type="checkbox"] + label, .checkbox-inline .modal-content .input-group-btn input[type="checkbox"] + label, .notice .modal-content .input-group-btn .close {
     margin-top: .5em; }
+
+#the_feed_sign_up_page_new_signup_form .signup-tags, #the_feed_sign_up_page_new_signup_form label[for=signup_home_address_prov] {
+  display: none; }
