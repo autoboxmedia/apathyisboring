@@ -2105,7 +2105,7 @@ output {
     color: #999; }
   .form-control::-webkit-input-placeholder, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount::-webkit-input-placeholder, #pledge_amount_other::-webkit-input-placeholder, #donation_amount_other::-webkit-input-placeholder, .form-group > select::-webkit-input-placeholder, .StripeElement::-webkit-input-placeholder {
     color: #999; }
-  .form-control[disabled], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount[disabled], #pledge_amount_other[disabled], #donation_amount_other[disabled], .form-group > select[disabled], .StripeElement[disabled], .form-control[readonly], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount[readonly], #pledge_amount_other[readonly], #donation_amount_other[readonly], .form-group > select[readonly], .StripeElement[readonly], fieldset[disabled] .form-control, fieldset[disabled] .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container fieldset[disabled] .nb_donation_v2_amount, fieldset[disabled] #pledge_amount_other, fieldset[disabled] #donation_amount_other, fieldset[disabled] .form-group > select, fieldset[disabled] .StripeElement {
+  .form-control[disabled], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container [disabled].nb_donation_v2_amount, [disabled]#pledge_amount_other, [disabled]#donation_amount_other, .form-group > select[disabled], [disabled].StripeElement, .form-control[readonly], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container [readonly].nb_donation_v2_amount, [readonly]#pledge_amount_other, [readonly]#donation_amount_other, .form-group > select[readonly], [readonly].StripeElement, fieldset[disabled] .form-control, fieldset[disabled] .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container fieldset[disabled] .nb_donation_v2_amount, fieldset[disabled] #pledge_amount_other, fieldset[disabled] #donation_amount_other, fieldset[disabled] .form-group > select, fieldset[disabled] .StripeElement {
     cursor: not-allowed;
     background-color: #F3F6F7;
     opacity: 1; }
@@ -2122,108 +2122,108 @@ input[type="datetime-local"],
 input[type="month"] {
   line-height: 33px;
   line-height: 1.5 \0; }
-  input.input-sm[type="date"], .input-group-sm > .form-control[type="date"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="date"], .input-group-sm > #pledge_amount_other[type="date"], .input-group-sm > #donation_amount_other[type="date"], .form-group.input-group-sm > select[type="date"], .input-group-sm > .StripeElement[type="date"],
-  .input-group-sm > .input-group-addon[type="date"],
-  .input-group-sm > .input-group-btn > .btn[type="date"],
-  .notice .modal-content .input-group-sm > .input-group-btn > .close[type="date"],
+  input[type="date"].input-sm, .input-group-sm > [type="date"].form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="date"].nb_donation_v2_amount, .input-group-sm > [type="date"]#pledge_amount_other, .input-group-sm > [type="date"]#donation_amount_other, .form-group.input-group-sm > select[type="date"], .input-group-sm > [type="date"].StripeElement,
+  .input-group-sm > [type="date"].input-group-addon,
+  .input-group-sm > .input-group-btn > [type="date"].btn,
+  .notice .modal-content .input-group-sm > .input-group-btn > [type="date"].close,
   .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="date"],
-  .radio-inline .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="date"],
-  input.input-sm[type="time"],
-  .input-group-sm > .form-control[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="time"],
-  .input-group-sm > #pledge_amount_other[type="time"],
-  .input-group-sm > #donation_amount_other[type="time"],
+  .radio-inline .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .checkbox-inline .input-group-sm > .input-group-btn > label[type="date"].radio,
+  input[type="time"].input-sm,
+  .input-group-sm > [type="time"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="time"].nb_donation_v2_amount,
+  .input-group-sm > [type="time"]#pledge_amount_other,
+  .input-group-sm > [type="time"]#donation_amount_other,
   .form-group.input-group-sm > select[type="time"],
-  .input-group-sm > .StripeElement[type="time"],
-  .input-group-sm > .input-group-addon[type="time"],
-  .input-group-sm > .input-group-btn > .btn[type="time"],
-  .notice .modal-content .input-group-sm > .input-group-btn > .close[type="time"],
+  .input-group-sm > [type="time"].StripeElement,
+  .input-group-sm > [type="time"].input-group-addon,
+  .input-group-sm > .input-group-btn > [type="time"].btn,
+  .notice .modal-content .input-group-sm > .input-group-btn > [type="time"].close,
   .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="time"],
-  .radio-inline .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="time"],
-  input.input-sm[type="datetime-local"],
-  .input-group-sm > .form-control[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="datetime-local"],
-  .input-group-sm > #pledge_amount_other[type="datetime-local"],
-  .input-group-sm > #donation_amount_other[type="datetime-local"],
+  .radio-inline .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .checkbox-inline .input-group-sm > .input-group-btn > label[type="time"].radio,
+  input[type="datetime-local"].input-sm,
+  .input-group-sm > [type="datetime-local"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="datetime-local"].nb_donation_v2_amount,
+  .input-group-sm > [type="datetime-local"]#pledge_amount_other,
+  .input-group-sm > [type="datetime-local"]#donation_amount_other,
   .form-group.input-group-sm > select[type="datetime-local"],
-  .input-group-sm > .StripeElement[type="datetime-local"],
-  .input-group-sm > .input-group-addon[type="datetime-local"],
-  .input-group-sm > .input-group-btn > .btn[type="datetime-local"],
-  .notice .modal-content .input-group-sm > .input-group-btn > .close[type="datetime-local"],
+  .input-group-sm > [type="datetime-local"].StripeElement,
+  .input-group-sm > [type="datetime-local"].input-group-addon,
+  .input-group-sm > .input-group-btn > [type="datetime-local"].btn,
+  .notice .modal-content .input-group-sm > .input-group-btn > [type="datetime-local"].close,
   .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
-  .radio-inline .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  input.input-sm[type="month"],
-  .input-group-sm > .form-control[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="month"],
-  .input-group-sm > #pledge_amount_other[type="month"],
-  .input-group-sm > #donation_amount_other[type="month"],
+  .radio-inline .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .checkbox-inline .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  input[type="month"].input-sm,
+  .input-group-sm > [type="month"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="month"].nb_donation_v2_amount,
+  .input-group-sm > [type="month"]#pledge_amount_other,
+  .input-group-sm > [type="month"]#donation_amount_other,
   .form-group.input-group-sm > select[type="month"],
-  .input-group-sm > .StripeElement[type="month"],
-  .input-group-sm > .input-group-addon[type="month"],
-  .input-group-sm > .input-group-btn > .btn[type="month"],
-  .notice .modal-content .input-group-sm > .input-group-btn > .close[type="month"],
+  .input-group-sm > [type="month"].StripeElement,
+  .input-group-sm > [type="month"].input-group-addon,
+  .input-group-sm > .input-group-btn > [type="month"].btn,
+  .notice .modal-content .input-group-sm > .input-group-btn > [type="month"].close,
   .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="month"],
-  .radio-inline .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="month"] {
+  .radio-inline .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .checkbox-inline .input-group-sm > .input-group-btn > label[type="month"].radio {
     line-height: 25px;
     line-height: 1 \0; }
-  input.input-lg[type="date"], .input-group-lg > .form-control[type="date"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="date"], .input-group-lg > #pledge_amount_other[type="date"], .input-group-lg > #donation_amount_other[type="date"], .form-group.input-group-lg > select[type="date"], .input-group-lg > .StripeElement[type="date"],
-  .input-group-lg > .input-group-addon[type="date"],
-  .input-group-lg > .input-group-btn > .btn[type="date"],
-  .notice .modal-content .input-group-lg > .input-group-btn > .close[type="date"],
+  input[type="date"].input-lg, .input-group-lg > [type="date"].form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="date"].nb_donation_v2_amount, .input-group-lg > [type="date"]#pledge_amount_other, .input-group-lg > [type="date"]#donation_amount_other, .form-group.input-group-lg > select[type="date"], .input-group-lg > [type="date"].StripeElement,
+  .input-group-lg > [type="date"].input-group-addon,
+  .input-group-lg > .input-group-btn > [type="date"].btn,
+  .notice .modal-content .input-group-lg > .input-group-btn > [type="date"].close,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="date"],
-  .radio-inline .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="date"],
-  input.input-lg[type="time"],
-  .input-group-lg > .form-control[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="time"],
-  .input-group-lg > #pledge_amount_other[type="time"],
-  .input-group-lg > #donation_amount_other[type="time"],
+  .radio-inline .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .checkbox-inline .input-group-lg > .input-group-btn > label[type="date"].radio,
+  input[type="time"].input-lg,
+  .input-group-lg > [type="time"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="time"].nb_donation_v2_amount,
+  .input-group-lg > [type="time"]#pledge_amount_other,
+  .input-group-lg > [type="time"]#donation_amount_other,
   .form-group.input-group-lg > select[type="time"],
-  .input-group-lg > .StripeElement[type="time"],
-  .input-group-lg > .input-group-addon[type="time"],
-  .input-group-lg > .input-group-btn > .btn[type="time"],
-  .notice .modal-content .input-group-lg > .input-group-btn > .close[type="time"],
+  .input-group-lg > [type="time"].StripeElement,
+  .input-group-lg > [type="time"].input-group-addon,
+  .input-group-lg > .input-group-btn > [type="time"].btn,
+  .notice .modal-content .input-group-lg > .input-group-btn > [type="time"].close,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="time"],
-  .radio-inline .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="time"],
-  input.input-lg[type="datetime-local"],
-  .input-group-lg > .form-control[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="datetime-local"],
-  .input-group-lg > #pledge_amount_other[type="datetime-local"],
-  .input-group-lg > #donation_amount_other[type="datetime-local"],
+  .radio-inline .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .checkbox-inline .input-group-lg > .input-group-btn > label[type="time"].radio,
+  input[type="datetime-local"].input-lg,
+  .input-group-lg > [type="datetime-local"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="datetime-local"].nb_donation_v2_amount,
+  .input-group-lg > [type="datetime-local"]#pledge_amount_other,
+  .input-group-lg > [type="datetime-local"]#donation_amount_other,
   .form-group.input-group-lg > select[type="datetime-local"],
-  .input-group-lg > .StripeElement[type="datetime-local"],
-  .input-group-lg > .input-group-addon[type="datetime-local"],
-  .input-group-lg > .input-group-btn > .btn[type="datetime-local"],
-  .notice .modal-content .input-group-lg > .input-group-btn > .close[type="datetime-local"],
+  .input-group-lg > [type="datetime-local"].StripeElement,
+  .input-group-lg > [type="datetime-local"].input-group-addon,
+  .input-group-lg > .input-group-btn > [type="datetime-local"].btn,
+  .notice .modal-content .input-group-lg > .input-group-btn > [type="datetime-local"].close,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
-  .radio-inline .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  input.input-lg[type="month"],
-  .input-group-lg > .form-control[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="month"],
-  .input-group-lg > #pledge_amount_other[type="month"],
-  .input-group-lg > #donation_amount_other[type="month"],
+  .radio-inline .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .checkbox-inline .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  input[type="month"].input-lg,
+  .input-group-lg > [type="month"].form-control,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="month"].nb_donation_v2_amount,
+  .input-group-lg > [type="month"]#pledge_amount_other,
+  .input-group-lg > [type="month"]#donation_amount_other,
   .form-group.input-group-lg > select[type="month"],
-  .input-group-lg > .StripeElement[type="month"],
-  .input-group-lg > .input-group-addon[type="month"],
-  .input-group-lg > .input-group-btn > .btn[type="month"],
-  .notice .modal-content .input-group-lg > .input-group-btn > .close[type="month"],
+  .input-group-lg > [type="month"].StripeElement,
+  .input-group-lg > [type="month"].input-group-addon,
+  .input-group-lg > .input-group-btn > [type="month"].btn,
+  .notice .modal-content .input-group-lg > .input-group-btn > [type="month"].close,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="month"],
-  .radio-inline .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="month"] {
+  .radio-inline .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .checkbox-inline .input-group-lg > .input-group-btn > label[type="month"].radio {
     line-height: 47px;
     line-height: 1.5 \0; }
 
@@ -2232,133 +2232,133 @@ _:-ms-fullscreen, :root input[type="time"],
 _:-ms-fullscreen, :root input[type="datetime-local"],
 _:-ms-fullscreen, :root input[type="month"] {
   line-height: 1.5; }
-  _.input-sm:-ms-fullscreen, .input-group-sm > .form-control:-ms-fullscreen, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount:-ms-fullscreen, .input-group-sm > #pledge_amount_other:-ms-fullscreen, .input-group-sm > #donation_amount_other:-ms-fullscreen, .form-group.input-group-sm > select:-ms-fullscreen, .input-group-sm > .StripeElement:-ms-fullscreen,
+  _:-ms-fullscreen.input-sm, .input-group-sm > .form-control:-ms-fullscreen, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount:-ms-fullscreen, .input-group-sm > #pledge_amount_other:-ms-fullscreen, .input-group-sm > #donation_amount_other:-ms-fullscreen, .form-group.input-group-sm > select:-ms-fullscreen, .input-group-sm > .StripeElement:-ms-fullscreen,
   .input-group-sm > .input-group-addon:-ms-fullscreen,
   .input-group-sm > .input-group-btn > .btn:-ms-fullscreen,
   .notice .modal-content .input-group-sm > .input-group-btn > .close:-ms-fullscreen,
   .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label:-ms-fullscreen,
   .radio-inline .input-group-sm > .input-group-btn > label.radio:-ms-fullscreen,
   .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio:-ms-fullscreen,
-  .checkbox-inline .input-group-sm > .input-group-btn > label.radio:-ms-fullscreen, :root input.input-sm[type="date"], :root .input-group-sm > .form-control[type="date"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="date"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > .nb_donation_v2_amount[type="date"], :root .input-group-sm > #pledge_amount_other[type="date"], :root .input-group-sm > #donation_amount_other[type="date"], :root .form-group.input-group-sm > select[type="date"], :root .input-group-sm > .StripeElement[type="date"],
-  :root .input-group-sm > .input-group-addon[type="date"],
-  :root .input-group-sm > .input-group-btn > .btn[type="date"],
-  :root .notice .modal-content .input-group-sm > .input-group-btn > .close[type="date"],
-  .notice .modal-content :root .input-group-sm > .input-group-btn > .close[type="date"],
+  .checkbox-inline .input-group-sm > .input-group-btn > label.radio:-ms-fullscreen, :root input[type="date"].input-sm, :root .input-group-sm > [type="date"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="date"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > [type="date"].nb_donation_v2_amount, :root .input-group-sm > [type="date"]#pledge_amount_other, :root .input-group-sm > [type="date"]#donation_amount_other, :root .form-group.input-group-sm > select[type="date"], :root .input-group-sm > [type="date"].StripeElement,
+  :root .input-group-sm > [type="date"].input-group-addon,
+  :root .input-group-sm > .input-group-btn > [type="date"].btn,
+  :root .notice .modal-content .input-group-sm > .input-group-btn > [type="date"].close,
+  .notice .modal-content :root .input-group-sm > .input-group-btn > [type="date"].close,
   :root .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="date"],
   .checkbox-inline :root .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="date"],
-  :root .radio-inline .input-group-sm > .input-group-btn > label.radio[type="date"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .radio-inline :root .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label.radio[type="date"],
-  :root .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="date"],
-  .checkbox-inline :root .input-group-sm > .input-group-btn > label.radio[type="date"],
-  _.input-sm:-ms-fullscreen, :root input.input-sm[type="time"], :root .input-group-sm > .form-control[type="time"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="time"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > .nb_donation_v2_amount[type="time"], :root .input-group-sm > #pledge_amount_other[type="time"], :root .input-group-sm > #donation_amount_other[type="time"], :root .form-group.input-group-sm > select[type="time"], :root .input-group-sm > .StripeElement[type="time"],
-  :root .input-group-sm > .input-group-addon[type="time"],
-  :root .input-group-sm > .input-group-btn > .btn[type="time"],
-  :root .notice .modal-content .input-group-sm > .input-group-btn > .close[type="time"],
-  .notice .modal-content :root .input-group-sm > .input-group-btn > .close[type="time"],
+  :root .radio-inline .input-group-sm > .input-group-btn > label[type="date"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .radio-inline :root .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label[type="date"].radio,
+  :root .checkbox-inline .input-group-sm > .input-group-btn > label[type="date"].radio,
+  .checkbox-inline :root .input-group-sm > .input-group-btn > label[type="date"].radio,
+  _:-ms-fullscreen.input-sm, :root input[type="time"].input-sm, :root .input-group-sm > [type="time"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="time"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > [type="time"].nb_donation_v2_amount, :root .input-group-sm > [type="time"]#pledge_amount_other, :root .input-group-sm > [type="time"]#donation_amount_other, :root .form-group.input-group-sm > select[type="time"], :root .input-group-sm > [type="time"].StripeElement,
+  :root .input-group-sm > [type="time"].input-group-addon,
+  :root .input-group-sm > .input-group-btn > [type="time"].btn,
+  :root .notice .modal-content .input-group-sm > .input-group-btn > [type="time"].close,
+  .notice .modal-content :root .input-group-sm > .input-group-btn > [type="time"].close,
   :root .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="time"],
   .checkbox-inline :root .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="time"],
-  :root .radio-inline .input-group-sm > .input-group-btn > label.radio[type="time"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .radio-inline :root .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label.radio[type="time"],
-  :root .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="time"],
-  .checkbox-inline :root .input-group-sm > .input-group-btn > label.radio[type="time"],
-  _.input-sm:-ms-fullscreen, :root input.input-sm[type="datetime-local"], :root .input-group-sm > .form-control[type="datetime-local"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="datetime-local"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > .nb_donation_v2_amount[type="datetime-local"], :root .input-group-sm > #pledge_amount_other[type="datetime-local"], :root .input-group-sm > #donation_amount_other[type="datetime-local"], :root .form-group.input-group-sm > select[type="datetime-local"], :root .input-group-sm > .StripeElement[type="datetime-local"],
-  :root .input-group-sm > .input-group-addon[type="datetime-local"],
-  :root .input-group-sm > .input-group-btn > .btn[type="datetime-local"],
-  :root .notice .modal-content .input-group-sm > .input-group-btn > .close[type="datetime-local"],
-  .notice .modal-content :root .input-group-sm > .input-group-btn > .close[type="datetime-local"],
+  :root .radio-inline .input-group-sm > .input-group-btn > label[type="time"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .radio-inline :root .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label[type="time"].radio,
+  :root .checkbox-inline .input-group-sm > .input-group-btn > label[type="time"].radio,
+  .checkbox-inline :root .input-group-sm > .input-group-btn > label[type="time"].radio,
+  _:-ms-fullscreen.input-sm, :root input[type="datetime-local"].input-sm, :root .input-group-sm > [type="datetime-local"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="datetime-local"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > [type="datetime-local"].nb_donation_v2_amount, :root .input-group-sm > [type="datetime-local"]#pledge_amount_other, :root .input-group-sm > [type="datetime-local"]#donation_amount_other, :root .form-group.input-group-sm > select[type="datetime-local"], :root .input-group-sm > [type="datetime-local"].StripeElement,
+  :root .input-group-sm > [type="datetime-local"].input-group-addon,
+  :root .input-group-sm > .input-group-btn > [type="datetime-local"].btn,
+  :root .notice .modal-content .input-group-sm > .input-group-btn > [type="datetime-local"].close,
+  .notice .modal-content :root .input-group-sm > .input-group-btn > [type="datetime-local"].close,
   :root .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
   .checkbox-inline :root .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
-  :root .radio-inline .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .radio-inline :root .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  :root .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  .checkbox-inline :root .input-group-sm > .input-group-btn > label.radio[type="datetime-local"],
-  _.input-sm:-ms-fullscreen, :root input.input-sm[type="month"], :root .input-group-sm > .form-control[type="month"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[type="month"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > .nb_donation_v2_amount[type="month"], :root .input-group-sm > #pledge_amount_other[type="month"], :root .input-group-sm > #donation_amount_other[type="month"], :root .form-group.input-group-sm > select[type="month"], :root .input-group-sm > .StripeElement[type="month"],
-  :root .input-group-sm > .input-group-addon[type="month"],
-  :root .input-group-sm > .input-group-btn > .btn[type="month"],
-  :root .notice .modal-content .input-group-sm > .input-group-btn > .close[type="month"],
-  .notice .modal-content :root .input-group-sm > .input-group-btn > .close[type="month"],
+  :root .radio-inline .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .radio-inline :root .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  :root .checkbox-inline .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  .checkbox-inline :root .input-group-sm > .input-group-btn > label[type="datetime-local"].radio,
+  _:-ms-fullscreen.input-sm, :root input[type="month"].input-sm, :root .input-group-sm > [type="month"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [type="month"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-sm > [type="month"].nb_donation_v2_amount, :root .input-group-sm > [type="month"]#pledge_amount_other, :root .input-group-sm > [type="month"]#donation_amount_other, :root .form-group.input-group-sm > select[type="month"], :root .input-group-sm > [type="month"].StripeElement,
+  :root .input-group-sm > [type="month"].input-group-addon,
+  :root .input-group-sm > .input-group-btn > [type="month"].btn,
+  :root .notice .modal-content .input-group-sm > .input-group-btn > [type="month"].close,
+  .notice .modal-content :root .input-group-sm > .input-group-btn > [type="month"].close,
   :root .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="month"],
   .checkbox-inline :root .input-group-sm > .input-group-btn > input[type="checkbox"] + label[type="month"],
-  :root .radio-inline .input-group-sm > .input-group-btn > label.radio[type="month"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .radio-inline :root .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label.radio[type="month"],
-  :root .checkbox-inline .input-group-sm > .input-group-btn > label.radio[type="month"],
-  .checkbox-inline :root .input-group-sm > .input-group-btn > label.radio[type="month"] {
+  :root .radio-inline .input-group-sm > .input-group-btn > label[type="month"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .radio-inline :root .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-sm > .input-group-btn > label[type="month"].radio,
+  :root .checkbox-inline .input-group-sm > .input-group-btn > label[type="month"].radio,
+  .checkbox-inline :root .input-group-sm > .input-group-btn > label[type="month"].radio {
     line-height: 1; }
-  _.input-lg:-ms-fullscreen, .input-group-lg > .form-control:-ms-fullscreen, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount:-ms-fullscreen, .input-group-lg > #pledge_amount_other:-ms-fullscreen, .input-group-lg > #donation_amount_other:-ms-fullscreen, .form-group.input-group-lg > select:-ms-fullscreen, .input-group-lg > .StripeElement:-ms-fullscreen,
+  _:-ms-fullscreen.input-lg, .input-group-lg > .form-control:-ms-fullscreen, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount:-ms-fullscreen, .input-group-lg > #pledge_amount_other:-ms-fullscreen, .input-group-lg > #donation_amount_other:-ms-fullscreen, .form-group.input-group-lg > select:-ms-fullscreen, .input-group-lg > .StripeElement:-ms-fullscreen,
   .input-group-lg > .input-group-addon:-ms-fullscreen,
   .input-group-lg > .input-group-btn > .btn:-ms-fullscreen,
   .notice .modal-content .input-group-lg > .input-group-btn > .close:-ms-fullscreen,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label:-ms-fullscreen,
   .radio-inline .input-group-lg > .input-group-btn > label.radio:-ms-fullscreen,
   .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio:-ms-fullscreen,
-  .checkbox-inline .input-group-lg > .input-group-btn > label.radio:-ms-fullscreen, :root input.input-lg[type="date"], :root .input-group-lg > .form-control[type="date"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="date"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > .nb_donation_v2_amount[type="date"], :root .input-group-lg > #pledge_amount_other[type="date"], :root .input-group-lg > #donation_amount_other[type="date"], :root .form-group.input-group-lg > select[type="date"], :root .input-group-lg > .StripeElement[type="date"],
-  :root .input-group-lg > .input-group-addon[type="date"],
-  :root .input-group-lg > .input-group-btn > .btn[type="date"],
-  :root .notice .modal-content .input-group-lg > .input-group-btn > .close[type="date"],
-  .notice .modal-content :root .input-group-lg > .input-group-btn > .close[type="date"],
+  .checkbox-inline .input-group-lg > .input-group-btn > label.radio:-ms-fullscreen, :root input[type="date"].input-lg, :root .input-group-lg > [type="date"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="date"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > [type="date"].nb_donation_v2_amount, :root .input-group-lg > [type="date"]#pledge_amount_other, :root .input-group-lg > [type="date"]#donation_amount_other, :root .form-group.input-group-lg > select[type="date"], :root .input-group-lg > [type="date"].StripeElement,
+  :root .input-group-lg > [type="date"].input-group-addon,
+  :root .input-group-lg > .input-group-btn > [type="date"].btn,
+  :root .notice .modal-content .input-group-lg > .input-group-btn > [type="date"].close,
+  .notice .modal-content :root .input-group-lg > .input-group-btn > [type="date"].close,
   :root .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="date"],
   .checkbox-inline :root .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="date"],
-  :root .radio-inline .input-group-lg > .input-group-btn > label.radio[type="date"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .radio-inline :root .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label.radio[type="date"],
-  :root .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="date"],
-  .checkbox-inline :root .input-group-lg > .input-group-btn > label.radio[type="date"],
-  _.input-lg:-ms-fullscreen, :root input.input-lg[type="time"], :root .input-group-lg > .form-control[type="time"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="time"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > .nb_donation_v2_amount[type="time"], :root .input-group-lg > #pledge_amount_other[type="time"], :root .input-group-lg > #donation_amount_other[type="time"], :root .form-group.input-group-lg > select[type="time"], :root .input-group-lg > .StripeElement[type="time"],
-  :root .input-group-lg > .input-group-addon[type="time"],
-  :root .input-group-lg > .input-group-btn > .btn[type="time"],
-  :root .notice .modal-content .input-group-lg > .input-group-btn > .close[type="time"],
-  .notice .modal-content :root .input-group-lg > .input-group-btn > .close[type="time"],
+  :root .radio-inline .input-group-lg > .input-group-btn > label[type="date"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .radio-inline :root .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label[type="date"].radio,
+  :root .checkbox-inline .input-group-lg > .input-group-btn > label[type="date"].radio,
+  .checkbox-inline :root .input-group-lg > .input-group-btn > label[type="date"].radio,
+  _:-ms-fullscreen.input-lg, :root input[type="time"].input-lg, :root .input-group-lg > [type="time"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="time"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > [type="time"].nb_donation_v2_amount, :root .input-group-lg > [type="time"]#pledge_amount_other, :root .input-group-lg > [type="time"]#donation_amount_other, :root .form-group.input-group-lg > select[type="time"], :root .input-group-lg > [type="time"].StripeElement,
+  :root .input-group-lg > [type="time"].input-group-addon,
+  :root .input-group-lg > .input-group-btn > [type="time"].btn,
+  :root .notice .modal-content .input-group-lg > .input-group-btn > [type="time"].close,
+  .notice .modal-content :root .input-group-lg > .input-group-btn > [type="time"].close,
   :root .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="time"],
   .checkbox-inline :root .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="time"],
-  :root .radio-inline .input-group-lg > .input-group-btn > label.radio[type="time"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .radio-inline :root .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label.radio[type="time"],
-  :root .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="time"],
-  .checkbox-inline :root .input-group-lg > .input-group-btn > label.radio[type="time"],
-  _.input-lg:-ms-fullscreen, :root input.input-lg[type="datetime-local"], :root .input-group-lg > .form-control[type="datetime-local"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="datetime-local"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > .nb_donation_v2_amount[type="datetime-local"], :root .input-group-lg > #pledge_amount_other[type="datetime-local"], :root .input-group-lg > #donation_amount_other[type="datetime-local"], :root .form-group.input-group-lg > select[type="datetime-local"], :root .input-group-lg > .StripeElement[type="datetime-local"],
-  :root .input-group-lg > .input-group-addon[type="datetime-local"],
-  :root .input-group-lg > .input-group-btn > .btn[type="datetime-local"],
-  :root .notice .modal-content .input-group-lg > .input-group-btn > .close[type="datetime-local"],
-  .notice .modal-content :root .input-group-lg > .input-group-btn > .close[type="datetime-local"],
+  :root .radio-inline .input-group-lg > .input-group-btn > label[type="time"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .radio-inline :root .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label[type="time"].radio,
+  :root .checkbox-inline .input-group-lg > .input-group-btn > label[type="time"].radio,
+  .checkbox-inline :root .input-group-lg > .input-group-btn > label[type="time"].radio,
+  _:-ms-fullscreen.input-lg, :root input[type="datetime-local"].input-lg, :root .input-group-lg > [type="datetime-local"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="datetime-local"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > [type="datetime-local"].nb_donation_v2_amount, :root .input-group-lg > [type="datetime-local"]#pledge_amount_other, :root .input-group-lg > [type="datetime-local"]#donation_amount_other, :root .form-group.input-group-lg > select[type="datetime-local"], :root .input-group-lg > [type="datetime-local"].StripeElement,
+  :root .input-group-lg > [type="datetime-local"].input-group-addon,
+  :root .input-group-lg > .input-group-btn > [type="datetime-local"].btn,
+  :root .notice .modal-content .input-group-lg > .input-group-btn > [type="datetime-local"].close,
+  .notice .modal-content :root .input-group-lg > .input-group-btn > [type="datetime-local"].close,
   :root .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
   .checkbox-inline :root .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="datetime-local"],
-  :root .radio-inline .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .radio-inline :root .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  :root .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  .checkbox-inline :root .input-group-lg > .input-group-btn > label.radio[type="datetime-local"],
-  _.input-lg:-ms-fullscreen, :root input.input-lg[type="month"], :root .input-group-lg > .form-control[type="month"], :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[type="month"], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > .nb_donation_v2_amount[type="month"], :root .input-group-lg > #pledge_amount_other[type="month"], :root .input-group-lg > #donation_amount_other[type="month"], :root .form-group.input-group-lg > select[type="month"], :root .input-group-lg > .StripeElement[type="month"],
-  :root .input-group-lg > .input-group-addon[type="month"],
-  :root .input-group-lg > .input-group-btn > .btn[type="month"],
-  :root .notice .modal-content .input-group-lg > .input-group-btn > .close[type="month"],
-  .notice .modal-content :root .input-group-lg > .input-group-btn > .close[type="month"],
+  :root .radio-inline .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .radio-inline :root .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  :root .checkbox-inline .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  .checkbox-inline :root .input-group-lg > .input-group-btn > label[type="datetime-local"].radio,
+  _:-ms-fullscreen.input-lg, :root input[type="month"].input-lg, :root .input-group-lg > [type="month"].form-control, :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [type="month"].nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container :root .input-group-lg > [type="month"].nb_donation_v2_amount, :root .input-group-lg > [type="month"]#pledge_amount_other, :root .input-group-lg > [type="month"]#donation_amount_other, :root .form-group.input-group-lg > select[type="month"], :root .input-group-lg > [type="month"].StripeElement,
+  :root .input-group-lg > [type="month"].input-group-addon,
+  :root .input-group-lg > .input-group-btn > [type="month"].btn,
+  :root .notice .modal-content .input-group-lg > .input-group-btn > [type="month"].close,
+  .notice .modal-content :root .input-group-lg > .input-group-btn > [type="month"].close,
   :root .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="month"],
   .checkbox-inline :root .input-group-lg > .input-group-btn > input[type="checkbox"] + label[type="month"],
-  :root .radio-inline .input-group-lg > .input-group-btn > label.radio[type="month"],
-  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .radio-inline :root .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label.radio[type="month"],
-  :root .checkbox-inline .input-group-lg > .input-group-btn > label.radio[type="month"],
-  .checkbox-inline :root .input-group-lg > .input-group-btn > label.radio[type="month"] {
+  :root .radio-inline .input-group-lg > .input-group-btn > label[type="month"].radio,
+  :root .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide :root .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .radio-inline :root .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span :root .input-group-lg > .input-group-btn > label[type="month"].radio,
+  :root .checkbox-inline .input-group-lg > .input-group-btn > label[type="month"].radio,
+  .checkbox-inline :root .input-group-lg > .input-group-btn > label[type="month"].radio {
     line-height: 1.5; }
 
 .form-group {
@@ -2406,9 +2406,9 @@ _:-ms-fullscreen, :root input[type="month"] {
   margin-top: 0;
   margin-left: 10px; }
 
-input[type="radio"][disabled], input.disabled[type="radio"], fieldset[disabled] input[type="radio"],
+input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] input[type="radio"],
 input[type="checkbox"][disabled],
-input.disabled[type="checkbox"], fieldset[disabled] input[type="checkbox"] {
+input[type="checkbox"].disabled, fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed; }
 
 .radio-inline.disabled, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span.disabled, fieldset[disabled] .radio-inline, fieldset[disabled] .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span, .page-type-donation-v2.page-pages-show-donation-v2-wide fieldset[disabled] .donation-v2-occurence-radio > span,
@@ -2423,14 +2423,14 @@ input.disabled[type="checkbox"], fieldset[disabled] input[type="checkbox"] {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 0; }
-  .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .form-control-static.nb_donation_v2_amount, .input-group-lg > #pledge_amount_other.form-control-static, .input-group-lg > #donation_amount_other.form-control-static, .form-group.input-group-lg > select.form-control-static, .input-group-lg > .form-control-static.StripeElement,
+  .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .form-control-static.nb_donation_v2_amount, .input-group-lg > .form-control-static#pledge_amount_other, .input-group-lg > .form-control-static#donation_amount_other, .form-group.input-group-lg > select.form-control-static, .input-group-lg > .form-control-static.StripeElement,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn,
   .notice .modal-content .input-group-lg > .input-group-btn > .form-control-static.close,
   .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label.form-control-static,
   .radio-inline .input-group-lg > .input-group-btn > label.form-control-static.radio,
   .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.form-control-static.radio,
-  .checkbox-inline .input-group-lg > .input-group-btn > label.form-control-static.radio, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .form-control-static.nb_donation_v2_amount, .input-group-sm > #pledge_amount_other.form-control-static, .input-group-sm > #donation_amount_other.form-control-static, .form-group.input-group-sm > select.form-control-static, .input-group-sm > .form-control-static.StripeElement,
+  .checkbox-inline .input-group-lg > .input-group-btn > label.form-control-static.radio, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .form-control-static.nb_donation_v2_amount, .input-group-sm > .form-control-static#pledge_amount_other, .input-group-sm > .form-control-static#donation_amount_other, .form-group.input-group-sm > select.form-control-static, .input-group-sm > .form-control-static.StripeElement,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn,
   .notice .modal-content .input-group-sm > .input-group-btn > .form-control-static.close,
@@ -2466,20 +2466,20 @@ textarea.input-sm, .input-group-sm > textarea.form-control, .page-type-donation-
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .notice .modal-content .input-group-sm > .input-group-btn > textarea.close, .form-group-sm .form-control, .form-group-sm .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .form-group-sm .nb_donation_v2_amount, .form-group-sm #pledge_amount_other, .form-group-sm #donation_amount_other, .form-group-sm .form-group > select, .form-group-sm .StripeElement,
-select.input-sm[multiple],
-.input-group-sm > .form-control[multiple],
-.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > .nb_donation_v2_amount[multiple],
-.input-group-sm > #pledge_amount_other[multiple],
-.input-group-sm > #donation_amount_other[multiple],
+select[multiple].input-sm,
+.input-group-sm > [multiple].form-control,
+.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-sm > [multiple].nb_donation_v2_amount,
+.input-group-sm > [multiple]#pledge_amount_other,
+.input-group-sm > [multiple]#donation_amount_other,
 .form-group.input-group-sm > select[multiple],
-.input-group-sm > .StripeElement[multiple],
-.input-group-sm > .input-group-addon[multiple],
-.input-group-sm > .input-group-btn > .btn[multiple],
-.notice .modal-content .input-group-sm > .input-group-btn > .close[multiple],
+.input-group-sm > [multiple].StripeElement,
+.input-group-sm > [multiple].input-group-addon,
+.input-group-sm > .input-group-btn > [multiple].btn,
+.notice .modal-content .input-group-sm > .input-group-btn > [multiple].close,
 .checkbox-inline .input-group-sm > .input-group-btn > input[type="checkbox"] + label[multiple],
-.radio-inline .input-group-sm > .input-group-btn > label.radio[multiple],
-.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label.radio[multiple],
-.checkbox-inline .input-group-sm > .input-group-btn > label.radio[multiple], .form-group-sm .form-control {
+.radio-inline .input-group-sm > .input-group-btn > label[multiple].radio,
+.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-sm > .input-group-btn > label[multiple].radio,
+.checkbox-inline .input-group-sm > .input-group-btn > label[multiple].radio, .form-group-sm .form-control {
   height: auto; }
 
 .input-lg, .input-group-lg > .form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount, .input-group-lg > #pledge_amount_other, .input-group-lg > #donation_amount_other, .form-group.input-group-lg > select, .input-group-lg > .StripeElement,
@@ -2507,20 +2507,20 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .page-type-donation-
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .notice .modal-content .input-group-lg > .input-group-btn > textarea.close, .form-group-lg .form-control, .form-group-lg .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .form-group-lg .nb_donation_v2_amount, .form-group-lg #pledge_amount_other, .form-group-lg #donation_amount_other, .form-group-lg .form-group > select, .form-group-lg .StripeElement,
-select.input-lg[multiple],
-.input-group-lg > .form-control[multiple],
-.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > .nb_donation_v2_amount[multiple],
-.input-group-lg > #pledge_amount_other[multiple],
-.input-group-lg > #donation_amount_other[multiple],
+select[multiple].input-lg,
+.input-group-lg > [multiple].form-control,
+.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .input-group-lg > [multiple].nb_donation_v2_amount,
+.input-group-lg > [multiple]#pledge_amount_other,
+.input-group-lg > [multiple]#donation_amount_other,
 .form-group.input-group-lg > select[multiple],
-.input-group-lg > .StripeElement[multiple],
-.input-group-lg > .input-group-addon[multiple],
-.input-group-lg > .input-group-btn > .btn[multiple],
-.notice .modal-content .input-group-lg > .input-group-btn > .close[multiple],
+.input-group-lg > [multiple].StripeElement,
+.input-group-lg > [multiple].input-group-addon,
+.input-group-lg > .input-group-btn > [multiple].btn,
+.notice .modal-content .input-group-lg > .input-group-btn > [multiple].close,
 .checkbox-inline .input-group-lg > .input-group-btn > input[type="checkbox"] + label[multiple],
-.radio-inline .input-group-lg > .input-group-btn > label.radio[multiple],
-.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label.radio[multiple],
-.checkbox-inline .input-group-lg > .input-group-btn > label.radio[multiple], .form-group-lg .form-control {
+.radio-inline .input-group-lg > .input-group-btn > label[multiple].radio,
+.page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-lg > .input-group-btn > label[multiple].radio,
+.checkbox-inline .input-group-lg > .input-group-btn > label[multiple].radio, .form-group-lg .form-control {
   height: auto; }
 
 .has-feedback {
@@ -2775,7 +2775,7 @@ select.input-lg[multiple],
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn:focus, .notice .modal-content .close:focus, .checkbox-inline input[type="checkbox"] + label:focus, .radio-inline label.radio:focus, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio:focus, .checkbox-inline label.radio:focus, .btn.focus, .notice .modal-content .focus.close, .checkbox-inline input[type="checkbox"] + label.focus, .radio-inline label.focus.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.focus.radio, .checkbox-inline label.focus.radio, .btn:active:focus, .btn.focus:active, .btn.active:focus, .btn.active.focus {
+  .btn:focus, .notice .modal-content .close:focus, .checkbox-inline input[type="checkbox"] + label:focus, .radio-inline label.radio:focus, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio:focus, .checkbox-inline label.radio:focus, .btn.focus, .notice .modal-content .focus.close, .checkbox-inline input[type="checkbox"] + label.focus, .radio-inline label.focus.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.focus.radio, .checkbox-inline label.focus.radio, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: thin dotted;
     outline: 1px dashed #DAE1E6;
     outline-offset: 0; }
@@ -2786,7 +2786,7 @@ select.input-lg[multiple],
     outline: 0;
     background-image: none;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, .notice .modal-content .disabled.close, .checkbox-inline input[type="checkbox"] + label.disabled, .radio-inline label.disabled.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.disabled.radio, .checkbox-inline label.disabled.radio, .btn[disabled], .notice .modal-content .close[disabled], .checkbox-inline input[type="checkbox"] + label[disabled], .radio-inline label.radio[disabled], .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio[disabled], .checkbox-inline label.radio[disabled], fieldset[disabled] .btn, fieldset[disabled] .notice .modal-content .close, .notice .modal-content fieldset[disabled] .close, fieldset[disabled] .checkbox-inline input[type="checkbox"] + label, .checkbox-inline fieldset[disabled] input[type="checkbox"] + label, fieldset[disabled] .radio-inline label.radio, fieldset[disabled] .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide fieldset[disabled] .donation-v2-occurence-radio > span label.radio, .radio-inline fieldset[disabled] label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span fieldset[disabled] label.radio, fieldset[disabled] .checkbox-inline label.radio, .checkbox-inline fieldset[disabled] label.radio {
+  .btn.disabled, .notice .modal-content .disabled.close, .checkbox-inline input[type="checkbox"] + label.disabled, .radio-inline label.disabled.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.disabled.radio, .checkbox-inline label.disabled.radio, .btn[disabled], .notice .modal-content [disabled].close, .checkbox-inline input[type="checkbox"] + label[disabled], .radio-inline label[disabled].radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label[disabled].radio, .checkbox-inline label[disabled].radio, fieldset[disabled] .btn, fieldset[disabled] .notice .modal-content .close, .notice .modal-content fieldset[disabled] .close, fieldset[disabled] .checkbox-inline input[type="checkbox"] + label, .checkbox-inline fieldset[disabled] input[type="checkbox"] + label, fieldset[disabled] .radio-inline label.radio, fieldset[disabled] .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide fieldset[disabled] .donation-v2-occurence-radio > span label.radio, .radio-inline fieldset[disabled] label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span fieldset[disabled] label.radio, fieldset[disabled] .checkbox-inline label.radio, .checkbox-inline fieldset[disabled] label.radio {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.65;
@@ -2803,7 +2803,7 @@ select.input-lg[multiple],
     border-color: #21ffb4; }
   .btn-default:active, .notice .modal-content .close:active, .btn-default.active, .notice .modal-content .active.close, .open > .btn-default.dropdown-toggle, .notice .modal-content .open > .dropdown-toggle.close {
     background-image: none; }
-  .btn-default.disabled, .notice .modal-content .disabled.close, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .notice .modal-content .close[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default.focus[disabled], .btn-default[disabled]:active, .btn-default.active[disabled], fieldset[disabled] .btn-default, fieldset[disabled] .notice .modal-content .close, .notice .modal-content fieldset[disabled] .close, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  .btn-default.disabled, .notice .modal-content .disabled.close, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .notice .modal-content [disabled].close, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .notice .modal-content .close, .notice .modal-content fieldset[disabled] .close, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
     background-color: #5EFFC9;
     border-color: #5EFFC9; }
   .btn-default .badge, .notice .modal-content .close .badge {
@@ -2820,7 +2820,7 @@ select.input-lg[multiple],
     border-color: #0ba784; }
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
     background-image: none; }
-  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary.focus[disabled], .btn-primary[disabled]:active, .btn-primary.active[disabled], fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
     background-color: #0FE0B1;
     border-color: #0FE0B1; }
   .btn-primary .badge {
@@ -2837,7 +2837,7 @@ select.input-lg[multiple],
     border-color: #0ba784; }
   .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
     background-image: none; }
-  .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success.focus[disabled], .btn-success[disabled]:active, .btn-success.active[disabled], fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
+  .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
     background-color: #0FE0B1;
     border-color: #0FE0B1; }
   .btn-success .badge {
@@ -2854,7 +2854,7 @@ select.input-lg[multiple],
     border-color: #00819c; }
   .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
     background-image: none; }
-  .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info.focus[disabled], .btn-info[disabled]:active, .btn-info.active[disabled], fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+  .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
     background-color: #00B4D9;
     border-color: #00B4D9; }
   .btn-info .badge {
@@ -2871,7 +2871,7 @@ select.input-lg[multiple],
     border-color: #bbd006; }
   .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
     background-image: none; }
-  .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning.focus[disabled], .btn-warning[disabled]:active, .btn-warning.active[disabled], fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
+  .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
     background-color: #E1F81C;
     border-color: #E1F81C; }
   .btn-warning .badge {
@@ -2888,7 +2888,7 @@ select.input-lg[multiple],
     border-color: #ff0c08; }
   .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
     background-image: none; }
-  .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger.focus[disabled], .btn-danger[disabled]:active, .btn-danger.active[disabled], fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
+  .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
     background-color: #FF4845;
     border-color: #FF4845; }
   .btn-danger .badge {
@@ -2937,9 +2937,9 @@ select.input-lg[multiple],
 .btn-block + .btn-block {
   margin-top: 5px; }
 
-input.btn-block[type="submit"],
-input.btn-block[type="reset"],
-input.btn-block[type="button"] {
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
   width: 100%; }
 
 .fade {
@@ -3137,7 +3137,7 @@ tbody.collapse.in {
     .checkbox-inline .btn-group-vertical > label.active.radio {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .notice .modal-content .close + .btn, .notice .modal-content .btn-group .close + .btn, .btn-group .notice .modal-content .btn + .close, .notice .modal-content .btn-group .btn + .close, .btn-group .notice .modal-content .close + .close, .notice .modal-content .btn-group .close + .close, .btn-group .checkbox-inline input[type="checkbox"] + label + .btn, .btn-group .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .btn-group .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .btn-group input[type="checkbox"] + label + .btn, .checkbox-inline .btn-group .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .btn-group input[type="checkbox"] + label + .close, .btn-group .checkbox-inline input.btn[type="checkbox"] + label, .btn-group .checkbox-inline .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .btn-group .checkbox-inline .close[type="checkbox"] + label, .checkbox-inline .btn-group input.btn[type="checkbox"] + label, .checkbox-inline .btn-group .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .checkbox-inline .btn-group .close[type="checkbox"] + label, .btn-group .radio-inline label.radio + .btn, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span label.radio + .btn, .btn-group .radio-inline .notice .modal-content label.radio + .close, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .btn-group .radio-inline label.radio + .close, .notice .modal-content .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .btn-group .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .btn-group label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + .btn, .radio-inline .btn-group .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .btn-group label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group label.radio + .close, .btn-group .checkbox-inline label.radio + .btn, .btn-group .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .btn-group .checkbox-inline label.radio + .close, .checkbox-inline .btn-group label.radio + .btn, .checkbox-inline .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .btn-group label.radio + .close, .btn-group .radio-inline .btn + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .btn + label.radio, .btn-group .radio-inline .notice .modal-content .close + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .btn-group .radio-inline .close + label.radio, .notice .modal-content .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .btn-group .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .btn-group .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .btn + label.radio, .radio-inline .btn-group .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .btn-group .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group .close + label.radio, .btn-group .radio-inline label.radio + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .btn-group label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + label.radio, .btn-group .checkbox-inline .btn + label.radio, .btn-group .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .btn-group .checkbox-inline .close + label.radio, .btn-group .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .btn-group .btn + label.radio, .checkbox-inline .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .btn-group .close + label.radio, .checkbox-inline .btn-group input[type="checkbox"] + label + label.radio, .btn-group .checkbox-inline label.radio + label.radio, .checkbox-inline .btn-group label.radio + label.radio,
+.btn-group .btn + .btn, .btn-group .notice .modal-content .close + .btn, .notice .modal-content .btn-group .close + .btn, .btn-group .notice .modal-content .btn + .close, .notice .modal-content .btn-group .btn + .close, .btn-group .notice .modal-content .close + .close, .notice .modal-content .btn-group .close + .close, .btn-group .checkbox-inline input[type="checkbox"] + label + .btn, .btn-group .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .btn-group .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .btn-group input[type="checkbox"] + label + .btn, .checkbox-inline .btn-group .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .btn-group input[type="checkbox"] + label + .close, .btn-group .checkbox-inline input[type="checkbox"].btn + label, .btn-group .checkbox-inline .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .btn-group .checkbox-inline [type="checkbox"].close + label, .checkbox-inline .btn-group input[type="checkbox"].btn + label, .checkbox-inline .btn-group .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .checkbox-inline .btn-group [type="checkbox"].close + label, .btn-group .radio-inline label.radio + .btn, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span label.radio + .btn, .btn-group .radio-inline .notice .modal-content label.radio + .close, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .btn-group .radio-inline label.radio + .close, .notice .modal-content .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .btn-group .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .btn-group label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + .btn, .radio-inline .btn-group .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .btn-group label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group label.radio + .close, .btn-group .checkbox-inline label.radio + .btn, .btn-group .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .btn-group .checkbox-inline label.radio + .close, .checkbox-inline .btn-group label.radio + .btn, .checkbox-inline .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .btn-group label.radio + .close, .btn-group .radio-inline .btn + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .btn + label.radio, .btn-group .radio-inline .notice .modal-content .close + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .btn-group .radio-inline .close + label.radio, .notice .modal-content .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .btn-group .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .btn-group .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .btn + label.radio, .radio-inline .btn-group .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .btn-group .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group .close + label.radio, .btn-group .radio-inline label.radio + label.radio, .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .btn-group label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group label.radio + label.radio, .btn-group .checkbox-inline .btn + label.radio, .btn-group .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .btn-group .checkbox-inline .close + label.radio, .btn-group .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .btn-group .btn + label.radio, .checkbox-inline .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .btn-group .close + label.radio, .checkbox-inline .btn-group input[type="checkbox"] + label + label.radio, .btn-group .checkbox-inline label.radio + label.radio, .checkbox-inline .btn-group label.radio + label.radio,
 .btn-group .btn + .btn-group,
 .btn-group .notice .modal-content .close + .btn-group,
 .notice .modal-content .btn-group .close + .btn-group,
@@ -3153,8 +3153,8 @@ tbody.collapse.in {
 .btn-group .btn-group + .btn,
 .btn-group .notice .modal-content .btn-group + .close,
 .notice .modal-content .btn-group .btn-group + .close,
-.btn-group .checkbox-inline input.btn-group[type="checkbox"] + label,
-.checkbox-inline .btn-group input.btn-group[type="checkbox"] + label,
+.btn-group .checkbox-inline input[type="checkbox"].btn-group + label,
+.checkbox-inline .btn-group input[type="checkbox"].btn-group + label,
 .btn-group .radio-inline .btn-group + label.radio,
 .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group + label.radio,
 .page-type-donation-v2.page-pages-show-donation-v2-wide .btn-group .donation-v2-occurence-radio > span .btn-group + label.radio,
@@ -3259,7 +3259,7 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group > .btn, .notice .modal-content .btn-group-vertical > .btn-group > .close, .checkbox-inline .btn-group-vertical > .btn-group > input[type="checkbox"] + label, .radio-inline .btn-group-vertical > .btn-group > label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .btn-group > label.radio, .checkbox-inline .btn-group-vertical > .btn-group > label.radio {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .notice .modal-content .btn-group-vertical > .close + .btn, .notice .modal-content .btn-group-vertical > .btn + .close, .notice .modal-content .btn-group-vertical > .close + .close, .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + .btn, .checkbox-inline .notice .modal-content .btn-group-vertical > input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + .close, .checkbox-inline .btn-group-vertical > input.btn[type="checkbox"] + label, .checkbox-inline .notice .modal-content .btn-group-vertical > .close[type="checkbox"] + label, .notice .modal-content .checkbox-inline .btn-group-vertical > .close[type="checkbox"] + label, .radio-inline .btn-group-vertical > label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .btn, .radio-inline .notice .modal-content .btn-group-vertical > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .btn-group-vertical > label.radio + .close, .notice .modal-content .radio-inline .btn-group-vertical > label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .close, .checkbox-inline .btn-group-vertical > label.radio + .btn, .checkbox-inline .notice .modal-content .btn-group-vertical > label.radio + .close, .notice .modal-content .checkbox-inline .btn-group-vertical > label.radio + .close, .radio-inline .btn-group-vertical > .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .btn + label.radio, .radio-inline .notice .modal-content .btn-group-vertical > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .btn-group-vertical > .close + label.radio, .notice .modal-content .radio-inline .btn-group-vertical > .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group-vertical > .close + label.radio, .radio-inline .btn-group-vertical > label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + label.radio, .checkbox-inline .btn-group-vertical > .btn + label.radio, .checkbox-inline .notice .modal-content .btn-group-vertical > .close + label.radio, .notice .modal-content .checkbox-inline .btn-group-vertical > .close + label.radio, .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + label.radio, .checkbox-inline .btn-group-vertical > label.radio + label.radio,
+.btn-group-vertical > .btn + .btn, .notice .modal-content .btn-group-vertical > .close + .btn, .notice .modal-content .btn-group-vertical > .btn + .close, .notice .modal-content .btn-group-vertical > .close + .close, .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + .btn, .checkbox-inline .notice .modal-content .btn-group-vertical > input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + .close, .checkbox-inline .btn-group-vertical > input[type="checkbox"].btn + label, .checkbox-inline .notice .modal-content .btn-group-vertical > [type="checkbox"].close + label, .notice .modal-content .checkbox-inline .btn-group-vertical > [type="checkbox"].close + label, .radio-inline .btn-group-vertical > label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .btn, .radio-inline .notice .modal-content .btn-group-vertical > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .btn-group-vertical > label.radio + .close, .notice .modal-content .radio-inline .btn-group-vertical > label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + .close, .checkbox-inline .btn-group-vertical > label.radio + .btn, .checkbox-inline .notice .modal-content .btn-group-vertical > label.radio + .close, .notice .modal-content .checkbox-inline .btn-group-vertical > label.radio + .close, .radio-inline .btn-group-vertical > .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .btn + label.radio, .radio-inline .notice .modal-content .btn-group-vertical > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .btn-group-vertical > .close + label.radio, .notice .modal-content .radio-inline .btn-group-vertical > .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .btn-group-vertical > .close + label.radio, .radio-inline .btn-group-vertical > label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > label.radio + label.radio, .checkbox-inline .btn-group-vertical > .btn + label.radio, .checkbox-inline .notice .modal-content .btn-group-vertical > .close + label.radio, .notice .modal-content .checkbox-inline .btn-group-vertical > .close + label.radio, .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + label.radio, .checkbox-inline .btn-group-vertical > label.radio + label.radio,
 .btn-group-vertical > .btn + .btn-group,
 .notice .modal-content .btn-group-vertical > .close + .btn-group,
 .checkbox-inline .btn-group-vertical > input[type="checkbox"] + label + .btn-group,
@@ -3268,7 +3268,7 @@ tbody.collapse.in {
 .checkbox-inline .btn-group-vertical > label.radio + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .notice .modal-content .btn-group-vertical > .btn-group + .close,
-.checkbox-inline .btn-group-vertical > input.btn-group[type="checkbox"] + label,
+.checkbox-inline .btn-group-vertical > input[type="checkbox"].btn-group + label,
 .radio-inline .btn-group-vertical > .btn-group + label.radio,
 .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn-group-vertical > .btn-group + label.radio,
 .checkbox-inline .btn-group-vertical > .btn-group + label.radio,
@@ -3479,7 +3479,7 @@ tbody.collapse.in {
   white-space: nowrap; }
   .input-group-btn > .btn, .notice .modal-content .input-group-btn > .close, .checkbox-inline .input-group-btn > input[type="checkbox"] + label, .radio-inline .input-group-btn > label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio, .checkbox-inline .input-group-btn > label.radio {
     position: relative; }
-    .input-group-btn > .btn + .btn, .notice .modal-content .input-group-btn > .close + .btn, .notice .modal-content .input-group-btn > .btn + .close, .notice .modal-content .input-group-btn > .close + .close, .checkbox-inline .input-group-btn > input[type="checkbox"] + label + .btn, .checkbox-inline .notice .modal-content .input-group-btn > input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .input-group-btn > input[type="checkbox"] + label + .close, .checkbox-inline .input-group-btn > input.btn[type="checkbox"] + label, .checkbox-inline .notice .modal-content .input-group-btn > .close[type="checkbox"] + label, .notice .modal-content .checkbox-inline .input-group-btn > .close[type="checkbox"] + label, .radio-inline .input-group-btn > label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + .btn, .radio-inline .notice .modal-content .input-group-btn > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .input-group-btn > label.radio + .close, .notice .modal-content .radio-inline .input-group-btn > label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .input-group-btn > label.radio + .close, .checkbox-inline .input-group-btn > label.radio + .btn, .checkbox-inline .notice .modal-content .input-group-btn > label.radio + .close, .notice .modal-content .checkbox-inline .input-group-btn > label.radio + .close, .radio-inline .input-group-btn > .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > .btn + label.radio, .radio-inline .notice .modal-content .input-group-btn > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .input-group-btn > .close + label.radio, .notice .modal-content .radio-inline .input-group-btn > .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .input-group-btn > .close + label.radio, .radio-inline .input-group-btn > label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + label.radio, .checkbox-inline .input-group-btn > .btn + label.radio, .checkbox-inline .notice .modal-content .input-group-btn > .close + label.radio, .notice .modal-content .checkbox-inline .input-group-btn > .close + label.radio, .checkbox-inline .input-group-btn > input[type="checkbox"] + label + label.radio, .checkbox-inline .input-group-btn > label.radio + label.radio {
+    .input-group-btn > .btn + .btn, .notice .modal-content .input-group-btn > .close + .btn, .notice .modal-content .input-group-btn > .btn + .close, .notice .modal-content .input-group-btn > .close + .close, .checkbox-inline .input-group-btn > input[type="checkbox"] + label + .btn, .checkbox-inline .notice .modal-content .input-group-btn > input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .input-group-btn > input[type="checkbox"] + label + .close, .checkbox-inline .input-group-btn > input[type="checkbox"].btn + label, .checkbox-inline .notice .modal-content .input-group-btn > [type="checkbox"].close + label, .notice .modal-content .checkbox-inline .input-group-btn > [type="checkbox"].close + label, .radio-inline .input-group-btn > label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + .btn, .radio-inline .notice .modal-content .input-group-btn > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .input-group-btn > label.radio + .close, .notice .modal-content .radio-inline .input-group-btn > label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .input-group-btn > label.radio + .close, .checkbox-inline .input-group-btn > label.radio + .btn, .checkbox-inline .notice .modal-content .input-group-btn > label.radio + .close, .notice .modal-content .checkbox-inline .input-group-btn > label.radio + .close, .radio-inline .input-group-btn > .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > .btn + label.radio, .radio-inline .notice .modal-content .input-group-btn > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .input-group-btn > .close + label.radio, .notice .modal-content .radio-inline .input-group-btn > .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .input-group-btn > .close + label.radio, .radio-inline .input-group-btn > label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio + label.radio, .checkbox-inline .input-group-btn > .btn + label.radio, .checkbox-inline .notice .modal-content .input-group-btn > .close + label.radio, .notice .modal-content .checkbox-inline .input-group-btn > .close + label.radio, .checkbox-inline .input-group-btn > input[type="checkbox"] + label + label.radio, .checkbox-inline .input-group-btn > label.radio + label.radio {
       margin-left: -1px; }
     .input-group-btn > .btn:hover, .notice .modal-content .input-group-btn > .close:hover, .checkbox-inline .input-group-btn > input[type="checkbox"] + label:hover, .radio-inline .input-group-btn > label.radio:hover, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio:hover, .checkbox-inline .input-group-btn > label.radio:hover, .input-group-btn > .btn:focus, .notice .modal-content .input-group-btn > .close:focus, .checkbox-inline .input-group-btn > input[type="checkbox"] + label:focus, .radio-inline .input-group-btn > label.radio:focus, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio:focus, .checkbox-inline .input-group-btn > label.radio:focus, .input-group-btn > .btn:active, .notice .modal-content .input-group-btn > .close:active, .checkbox-inline .input-group-btn > input[type="checkbox"] + label:active, .radio-inline .input-group-btn > label.radio:active, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .input-group-btn > label.radio:active, .checkbox-inline .input-group-btn > label.radio:active {
       z-index: 2; }
@@ -4166,7 +4166,7 @@ a.label:hover, a.on-button-small:hover, a.off-button-small:hover, a.label:focus,
 
 .label-success, .on-button-small {
   background-color: #0FE0B1; }
-  .label-success[href]:hover, .on-button-small[href]:hover, .label-success[href]:focus, .on-button-small[href]:focus {
+  .label-success[href]:hover, [href].on-button-small:hover, .label-success[href]:focus, [href].on-button-small:focus {
     background-color: #0cb08b; }
 
 .label-info {
@@ -4181,7 +4181,7 @@ a.label:hover, a.on-button-small:hover, a.off-button-small:hover, a.label:focus,
 
 .label-danger, .off-button-small {
   background-color: #FF4845; }
-  .label-danger[href]:hover, .off-button-small[href]:hover, .label-danger[href]:focus, .off-button-small[href]:focus {
+  .label-danger[href]:hover, [href].off-button-small:hover, .label-danger[href]:focus, [href].off-button-small:focus {
     background-color: #ff1612; }
 
 .badge {
@@ -4993,10 +4993,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer .notice .modal-content .close + .btn, .notice .modal-content .modal-footer .close + .btn, .modal-footer .notice .modal-content .btn + .close, .notice .modal-content .modal-footer .btn + .close, .modal-footer .notice .modal-content .close + .close, .notice .modal-content .modal-footer .close + .close, .modal-footer .checkbox-inline input[type="checkbox"] + label + .btn, .modal-footer .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .modal-footer .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .modal-footer input[type="checkbox"] + label + .btn, .checkbox-inline .modal-footer .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .modal-footer input[type="checkbox"] + label + .close, .modal-footer .checkbox-inline input.btn[type="checkbox"] + label, .modal-footer .checkbox-inline .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .modal-footer .checkbox-inline .close[type="checkbox"] + label, .checkbox-inline .modal-footer input.btn[type="checkbox"] + label, .checkbox-inline .modal-footer .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .checkbox-inline .modal-footer .close[type="checkbox"] + label, .modal-footer .radio-inline label.radio + .btn, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span label.radio + .btn, .modal-footer .radio-inline .notice .modal-content label.radio + .close, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .radio-inline label.radio + .close, .notice .modal-content .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .modal-footer label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + .btn, .radio-inline .modal-footer .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .modal-footer label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer label.radio + .close, .modal-footer .checkbox-inline label.radio + .btn, .modal-footer .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .checkbox-inline label.radio + .close, .checkbox-inline .modal-footer label.radio + .btn, .checkbox-inline .modal-footer .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .modal-footer label.radio + .close, .modal-footer .radio-inline .btn + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .btn + label.radio, .modal-footer .radio-inline .notice .modal-content .close + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .radio-inline .close + label.radio, .notice .modal-content .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .modal-footer .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn + label.radio, .radio-inline .modal-footer .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .modal-footer .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .close + label.radio, .modal-footer .radio-inline label.radio + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .modal-footer label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + label.radio, .modal-footer .checkbox-inline .btn + label.radio, .modal-footer .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .checkbox-inline .close + label.radio, .modal-footer .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .modal-footer .btn + label.radio, .checkbox-inline .modal-footer .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .modal-footer .close + label.radio, .checkbox-inline .modal-footer input[type="checkbox"] + label + label.radio, .modal-footer .checkbox-inline label.radio + label.radio, .checkbox-inline .modal-footer label.radio + label.radio {
+  .modal-footer .btn + .btn, .modal-footer .notice .modal-content .close + .btn, .notice .modal-content .modal-footer .close + .btn, .modal-footer .notice .modal-content .btn + .close, .notice .modal-content .modal-footer .btn + .close, .modal-footer .notice .modal-content .close + .close, .notice .modal-content .modal-footer .close + .close, .modal-footer .checkbox-inline input[type="checkbox"] + label + .btn, .modal-footer .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .modal-footer .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .modal-footer input[type="checkbox"] + label + .btn, .checkbox-inline .modal-footer .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .modal-footer input[type="checkbox"] + label + .close, .modal-footer .checkbox-inline input[type="checkbox"].btn + label, .modal-footer .checkbox-inline .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .modal-footer .checkbox-inline [type="checkbox"].close + label, .checkbox-inline .modal-footer input[type="checkbox"].btn + label, .checkbox-inline .modal-footer .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .checkbox-inline .modal-footer [type="checkbox"].close + label, .modal-footer .radio-inline label.radio + .btn, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span label.radio + .btn, .modal-footer .radio-inline .notice .modal-content label.radio + .close, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .radio-inline label.radio + .close, .notice .modal-content .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .modal-footer label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + .btn, .radio-inline .modal-footer .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .modal-footer label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer label.radio + .close, .modal-footer .checkbox-inline label.radio + .btn, .modal-footer .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .checkbox-inline label.radio + .close, .checkbox-inline .modal-footer label.radio + .btn, .checkbox-inline .modal-footer .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .modal-footer label.radio + .close, .modal-footer .radio-inline .btn + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .btn + label.radio, .modal-footer .radio-inline .notice .modal-content .close + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .radio-inline .close + label.radio, .notice .modal-content .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .modal-footer .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn + label.radio, .radio-inline .modal-footer .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .modal-footer .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .close + label.radio, .modal-footer .radio-inline label.radio + label.radio, .modal-footer .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .modal-footer label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer label.radio + label.radio, .modal-footer .checkbox-inline .btn + label.radio, .modal-footer .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .checkbox-inline .close + label.radio, .modal-footer .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .modal-footer .btn + label.radio, .checkbox-inline .modal-footer .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .modal-footer .close + label.radio, .checkbox-inline .modal-footer input[type="checkbox"] + label + label.radio, .modal-footer .checkbox-inline label.radio + label.radio, .checkbox-inline .modal-footer label.radio + label.radio {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .notice .modal-content .close + .btn, .notice .modal-content .modal-footer .btn-group .close + .btn, .modal-footer .btn-group .notice .modal-content .btn + .close, .notice .modal-content .modal-footer .btn-group .btn + .close, .modal-footer .btn-group .notice .modal-content .close + .close, .notice .modal-content .modal-footer .btn-group .close + .close, .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + .btn, .modal-footer .btn-group .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + .btn, .checkbox-inline .modal-footer .btn-group .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + .close, .modal-footer .btn-group .checkbox-inline input.btn[type="checkbox"] + label, .modal-footer .btn-group .checkbox-inline .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .modal-footer .btn-group .checkbox-inline .close[type="checkbox"] + label, .checkbox-inline .modal-footer .btn-group input.btn[type="checkbox"] + label, .checkbox-inline .modal-footer .btn-group .notice .modal-content .close[type="checkbox"] + label, .notice .modal-content .checkbox-inline .modal-footer .btn-group .close[type="checkbox"] + label, .modal-footer .btn-group .radio-inline label.radio + .btn, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + .btn, .modal-footer .btn-group .radio-inline .notice .modal-content label.radio + .close, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .btn-group .radio-inline label.radio + .close, .notice .modal-content .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .modal-footer .btn-group label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .btn, .radio-inline .modal-footer .btn-group .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .modal-footer .btn-group label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .close, .modal-footer .btn-group .checkbox-inline label.radio + .btn, .modal-footer .btn-group .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .btn-group .checkbox-inline label.radio + .close, .checkbox-inline .modal-footer .btn-group label.radio + .btn, .checkbox-inline .modal-footer .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .modal-footer .btn-group label.radio + .close, .modal-footer .btn-group .radio-inline .btn + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .btn + label.radio, .modal-footer .btn-group .radio-inline .notice .modal-content .close + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .btn-group .radio-inline .close + label.radio, .notice .modal-content .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .btn-group .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .modal-footer .btn-group .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .btn + label.radio, .radio-inline .modal-footer .btn-group .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .modal-footer .btn-group .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .btn-group .close + label.radio, .modal-footer .btn-group .radio-inline label.radio + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .modal-footer .btn-group label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + label.radio, .modal-footer .btn-group .checkbox-inline .btn + label.radio, .modal-footer .btn-group .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .btn-group .checkbox-inline .close + label.radio, .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .modal-footer .btn-group .btn + label.radio, .checkbox-inline .modal-footer .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .modal-footer .btn-group .close + label.radio, .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + label.radio, .modal-footer .btn-group .checkbox-inline label.radio + label.radio, .checkbox-inline .modal-footer .btn-group label.radio + label.radio {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .notice .modal-content .close + .btn, .notice .modal-content .modal-footer .btn-group .close + .btn, .modal-footer .btn-group .notice .modal-content .btn + .close, .notice .modal-content .modal-footer .btn-group .btn + .close, .modal-footer .btn-group .notice .modal-content .close + .close, .notice .modal-content .modal-footer .btn-group .close + .close, .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + .btn, .modal-footer .btn-group .checkbox-inline .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + .close, .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + .btn, .checkbox-inline .modal-footer .btn-group .notice .modal-content input[type="checkbox"] + label + .close, .notice .modal-content .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + .close, .modal-footer .btn-group .checkbox-inline input[type="checkbox"].btn + label, .modal-footer .btn-group .checkbox-inline .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .modal-footer .btn-group .checkbox-inline [type="checkbox"].close + label, .checkbox-inline .modal-footer .btn-group input[type="checkbox"].btn + label, .checkbox-inline .modal-footer .btn-group .notice .modal-content [type="checkbox"].close + label, .notice .modal-content .checkbox-inline .modal-footer .btn-group [type="checkbox"].close + label, .modal-footer .btn-group .radio-inline label.radio + .btn, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + .btn, .modal-footer .btn-group .radio-inline .notice .modal-content label.radio + .close, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .btn-group .radio-inline label.radio + .close, .notice .modal-content .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + .close, .radio-inline .modal-footer .btn-group label.radio + .btn, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .btn, .radio-inline .modal-footer .btn-group .notice .modal-content label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .radio-inline .modal-footer .btn-group label.radio + .close, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .close, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + .close, .modal-footer .btn-group .checkbox-inline label.radio + .btn, .modal-footer .btn-group .checkbox-inline .notice .modal-content label.radio + .close, .notice .modal-content .modal-footer .btn-group .checkbox-inline label.radio + .close, .checkbox-inline .modal-footer .btn-group label.radio + .btn, .checkbox-inline .modal-footer .btn-group .notice .modal-content label.radio + .close, .notice .modal-content .checkbox-inline .modal-footer .btn-group label.radio + .close, .modal-footer .btn-group .radio-inline .btn + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .btn + label.radio, .modal-footer .btn-group .radio-inline .notice .modal-content .close + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .btn-group .radio-inline .close + label.radio, .notice .modal-content .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .modal-footer .btn-group .donation-v2-occurence-radio > span .close + label.radio, .radio-inline .modal-footer .btn-group .btn + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .btn + label.radio, .radio-inline .modal-footer .btn-group .notice .modal-content .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .radio-inline .modal-footer .btn-group .close + label.radio, .notice .modal-content .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group .close + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .notice .modal-content .donation-v2-occurence-radio > span .modal-footer .btn-group .close + label.radio, .modal-footer .btn-group .radio-inline label.radio + label.radio, .modal-footer .btn-group .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .modal-footer .btn-group .donation-v2-occurence-radio > span label.radio + label.radio, .radio-inline .modal-footer .btn-group label.radio + label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span .modal-footer .btn-group label.radio + label.radio, .modal-footer .btn-group .checkbox-inline .btn + label.radio, .modal-footer .btn-group .checkbox-inline .notice .modal-content .close + label.radio, .notice .modal-content .modal-footer .btn-group .checkbox-inline .close + label.radio, .modal-footer .btn-group .checkbox-inline input[type="checkbox"] + label + label.radio, .checkbox-inline .modal-footer .btn-group .btn + label.radio, .checkbox-inline .modal-footer .btn-group .notice .modal-content .close + label.radio, .notice .modal-content .checkbox-inline .modal-footer .btn-group .close + label.radio, .checkbox-inline .modal-footer .btn-group input[type="checkbox"] + label + label.radio, .modal-footer .btn-group .checkbox-inline label.radio + label.radio, .checkbox-inline .modal-footer .btn-group label.radio + label.radio {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -6615,7 +6615,7 @@ ol.CodeRay li {
   border-bottom: 8px solid transparent;
   border-right: 8px solid transparent; }
 
-.vote-new .basics table tr td.active-row:first-child:before {
+.vote-new .basics table tr td:first-child.active-row:before {
   color: #FF00FF;
   position: absolute;
   left: -19px;
@@ -6860,7 +6860,7 @@ h2.pink-header {
       max-width: 70px; } }
 @media (min-width: 768px) {
   .not-home .col-md-8 {
-    width: 692px;
+    width: 795px;
     margin: 0 auto !important;
     float: none;
     padding: 0; } }
@@ -7293,13 +7293,13 @@ img {
     .our-board a.blocks img, .grid-photo-link a img {
       width: 100%;
       height: auto; } }
-.grid-photo-link a {
+.grid-photo-link .headshot a {
   display: block; }
 
 .our-board a.blocks:after, .grid-photo-link area:after {
   display: none; }
 
-.our-board a.blocks:hover:after, .grid-photo-link a:hover:after {
+.our-board a.blocks:hover:after, .grid-photo-link .headshot a:hover:after {
   position: absolute;
   content: "";
   background-image: none;
@@ -7309,9 +7309,6 @@ img {
   bottom: 0;
   border: 6px solid #FF00FF; }
 
-.team {
-  color: #fff; }
-
 .team p {
   margin-bottom: 5px !important; }
 
@@ -7320,7 +7317,7 @@ img {
   font-style: normal; }
 
 .team a:hover:after {
-  border: 6px solid #5EFFC9 !important;
+  border: 6px solid #FF00FF;
   width: 100%;
   background-image: none; }
 
@@ -7337,9 +7334,41 @@ img {
   @media screen and (max-width: 560px) {
     .our-board .col-md-4, .grid-photo-link .col-md-4 {
       width: 100%; } }
-.grid-photo-link tr, .grid-photo-link td {
-  height: auto !important; }
-
+.grid-photo-link {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  font-size: 16px; }
+  .grid-photo-link .member {
+    -webkit-flex-basis: calc(33% - 12px);
+            flex-basis: calc(33% - 12px);
+    margin-bottom: 50px; }
+  .grid-photo-link tr, .grid-photo-link td {
+    height: auto !important; }
+  .grid-photo-link .headshot img {
+    width: 100%; }
+  .grid-photo-link .name {
+    text-transform: uppercase; }
+  .grid-photo-link .title {
+    font-style: italic; }
+  .grid-photo-link .modal-dialog h3 {
+    margin-bottom: 0; }
+  .grid-photo-link .modal-dialog .title {
+    margin-bottom: 1em; }
+  @media screen and (min-width: 768px) {
+    .grid-photo-link .modal-dialog {
+      max-width: 700px;
+      width: 700px; } }
+  @media screen and (max-width: 768px) {
+    .grid-photo-link {
+      -webkit-flex-direction: column;
+              flex-direction: column;
+      -webkit-flex-wrap: initial;
+              flex-wrap: initial; } }
 .grid-photo-link td {
   padding: 0;
   margin-bottom: 25px;
@@ -8629,7 +8658,7 @@ a.splash-arrow:hover {
 .splash-wrapper {
   opacity: 0; }
 
-.alpha-shadow, .page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div.donation-v2-container[class*="col-"], .donation-container, .question-card:hover {
+.alpha-shadow, .page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div[class*="col-"].donation-v2-container, .donation-container, .question-card:hover {
   box-shadow: 0 5px 17px rgba(0, 0, 0, 0.13); }
 
 .beta-shadow, .question-card, .activity-stream-card:hover {
@@ -9097,7 +9126,7 @@ ul.homepage_excerpt-list {
   font-size: 13.5px;
   line-height: 18px;
   border-radius: 100px; }
-  .btn:focus, .notice .modal-content .close:focus, .checkbox-inline input[type="checkbox"] + label:focus, .radio-inline label.radio:focus, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio:focus, .checkbox-inline label.radio:focus, .btn.focus, .notice .modal-content .focus.close, .checkbox-inline input[type="checkbox"] + label.focus, .radio-inline label.focus.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.focus.radio, .checkbox-inline label.focus.radio, .btn:active:focus, .btn.focus:active, .btn.active:focus, .btn.active.focus {
+  .btn:focus, .notice .modal-content .close:focus, .checkbox-inline input[type="checkbox"] + label:focus, .radio-inline label.radio:focus, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio:focus, .checkbox-inline label.radio:focus, .btn.focus, .notice .modal-content .focus.close, .checkbox-inline input[type="checkbox"] + label.focus, .radio-inline label.focus.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.focus.radio, .checkbox-inline label.focus.radio, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: thin dotted;
     outline: 1px dashed #DAE1E6;
     outline-offset: 0; }
@@ -9176,7 +9205,7 @@ ul.homepage_excerpt-list {
     outline: none;
     border: 1px solid #000;
     box-shadow: none; }
-  .form-control.quantity, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .quantity.nb_donation_v2_amount, #pledge_amount_other.quantity, #donation_amount_other.quantity, .form-group > select.quantity, .quantity.StripeElement, .form-control.equal-padding, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .equal-padding.nb_donation_v2_amount, #pledge_amount_other.equal-padding, #donation_amount_other.equal-padding, .form-group > select.equal-padding, .equal-padding.StripeElement {
+  .form-control.quantity, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .quantity.nb_donation_v2_amount, .quantity#pledge_amount_other, .quantity#donation_amount_other, .form-group > select.quantity, .quantity.StripeElement, .form-control.equal-padding, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .equal-padding.nb_donation_v2_amount, .equal-padding#pledge_amount_other, .equal-padding#donation_amount_other, .form-group > select.equal-padding, .equal-padding.StripeElement {
     padding: 18px;
     margin-right: 10px; }
   @media only screen and (max-device-width: 736px) {
@@ -9204,15 +9233,15 @@ label {
 .StripeElement:active ~ label,
 .form-control.used ~ label,
 .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .used.nb_donation_v2_amount ~ label,
-#pledge_amount_other.used ~ label,
-#donation_amount_other.used ~ label,
+.used#pledge_amount_other ~ label,
+.used#donation_amount_other ~ label,
 .form-group > select.used ~ label,
 .used.StripeElement ~ label,
 select ~ label,
 .form-control.used ~ span ~ label,
 .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .used.nb_donation_v2_amount ~ span ~ label,
-#pledge_amount_other.used ~ span ~ label,
-#donation_amount_other.used ~ span ~ label,
+.used#pledge_amount_other ~ span ~ label,
+.used#donation_amount_other ~ span ~ label,
 .form-group > select.used ~ span ~ label,
 .used.StripeElement ~ span ~ label {
   top: 4.5px;
@@ -9229,8 +9258,8 @@ select ~ label,
 .StripeElement:active ~ .error-message,
 .form-control.used ~ .error-message,
 .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .used.nb_donation_v2_amount ~ .error-message,
-#pledge_amount_other.used ~ .error-message,
-#donation_amount_other.used ~ .error-message,
+.used#pledge_amount_other ~ .error-message,
+.used#donation_amount_other ~ .error-message,
 .form-group > select.used ~ .error-message,
 .used.StripeElement ~ .error-message {
   visibility: hidden; }
@@ -11162,7 +11191,7 @@ select.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .do
       padding-left: 5px;
       padding-right: 5px; }
 
-.page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div.donation-v2-container[class*="col-"] {
+.page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div[class*="col-"].donation-v2-container {
   padding: 50px 15px;
   background: white; }
 
@@ -11204,7 +11233,7 @@ select.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .do
     background-color: #5EFFC9;
     color: #fff;
     border-color: transparent; }
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .radio-inline.donation-v2-amounts #donation_amount_other.used + label, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span.donation-v2-amounts #donation_amount_other.used + label {
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .radio-inline.donation-v2-amounts .used#donation_amount_other + label, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span.donation-v2-amounts .used#donation_amount_other + label {
     font-size: 13.5px; }
   .page-type-donation-v2.page-pages-show-donation-v2-wide .radio-inline.donation-v2-amounts span, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span.donation-v2-amounts span {
     float: left;
@@ -11300,7 +11329,7 @@ select.form-control, .page-type-donation-v2.page-pages-show-donation-v2-wide .do
       padding-left: 0; }
   .page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter > .row {
     padding: 0 100px; }
-  .page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div.donation-v2-container[class*="col-"] {
+  .page-type-donation-v2.page-pages-show-donation-v2-wide .small-gutter div[class*="col-"].donation-v2-container {
     padding: 50px 60px; } }
 
 /*AUTOBOX MEDIA*/
@@ -11451,9 +11480,49 @@ ul.language-switch {
 #the_feed_sign_up_page_new_signup_form .signup-tags, #the_feed_sign_up_page_new_signup_form label[for=signup_home_address_prov] {
   display: none; }
 
-.form {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 2em; }
+form.donation_form {
+  padding-bottom: 50px; }
+  form.donation_form .form-progress-indicator {
+    width: 100%;
+    left: auto; }
+  form.donation_form .progress-indicator-stages li {
+    width: 33.3333%;
+    margin-right: 0;
+    padding-bottom: 12px;
+    color: inherit; }
+    form.donation_form .progress-indicator-stages li::after {
+      display: none; }
+    form.donation_form .progress-indicator-stages li .stage-label {
+      display: block;
+      padding-bottom: 5px; }
+    form.donation_form .progress-indicator-stages li .stage-count {
+      margin-right: auto;
+      margin-left: auto; }
+  form.donation_form .radio-inline label.radio, form.donation_form .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-v2-occurence-radio > span label.radio, .page-type-donation-v2.page-pages-show-donation-v2-wide form.donation_form .donation-v2-occurence-radio > span label.radio {
+    line-height: 23px !important;
+    font-size: 18px !important; }
+  form.donation_form input[type=radio] {
+    -webkit-appearance: auto;
+       -moz-appearance: auto;
+            appearance: auto; }
+    form.donation_form input[type=radio] + label {
+      display: inline-block;
+      margin-right: 2em;
+      margin-bottom: 0; }
+  form.donation_form input.text {
+    border: 1px solid #ccc; }
+  form.donation_form input[type=number] {
+    padding: 15px; }
+  form.donation_form .btn-primary {
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto; }
+  form.donation_form .navigation {
+    font-size: 14px; }
+  form.donation_form .form-group .form-error, form.donation_form .form-group .page-type-donation-v2.page-pages-show-donation-v2-wide span.error-message, .page-type-donation-v2.page-pages-show-donation-v2-wide form.donation_form .form-group span.error-message {
+    font-size: 14px; }
+  form.donation_form .form-control.card-field, form.donation_form .card-field.StripeElement, form.donation_form .form-group > select.card-field, form.donation_form .card-field#donation_amount_other, form.donation_form .card-field#pledge_amount_other, form.donation_form .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container .card-field.nb_donation_v2_amount, .page-type-donation-v2.page-pages-show-donation-v2-wide .donation-other-input-container form.donation_form .card-field.nb_donation_v2_amount {
+    height: auto;
+    padding: 0;
+    border: inherit; }
 /*# sourceMappingURL=theme.css.map */

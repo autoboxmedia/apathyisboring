@@ -47,7 +47,21 @@ aib = {
 	init: function() {
 		this.expandeableNav();
 		this.langControls();
-		//this.devMode();
+		this.renderPage();
+
+		this.devMode();
+	},
+
+	renderPage: function() {
+		if ($('.grid-photo-link').length) {
+			$('.grid-photo-link').each(function(){
+				$('a', this).click(function(e){
+					e.preventDefault();
+					var content = $(this).parents('.member').find('.content');
+					content.modal('show');
+				});
+			});
+		}
 	},
 	
 	expandeableNav: function() {
@@ -90,8 +104,8 @@ aib = {
 				document.aibDevMode = true;
 				$('head link[href*="'+ remoteCss +'"]').remove();
 				$('head').append('<link rel="stylesheet"  href="'+ localUrl + localCss +'" type="text/css" media="all">');
-				$('script[src*="'+ remoteJs +'"]').remove();
-				$('body').append('<script src="'+ localUrl + localJs +'" ></script>');
+				// $('script[src*="'+ remoteJs +'"]').remove();
+				// $('body').append('<script src="'+ localUrl + localJs +'" ></script>');
 				console.log('AiB: local assets swapped in');
 			}
 		});

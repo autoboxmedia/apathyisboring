@@ -1,0 +1,49 @@
+{% assign str_close = "Close" %}
+{% assign url = page.full_url | split: '/' %}
+{% if url[2] contains 'lapathie' %}
+	{% assign str_close = "Fermer" %}
+{% endif %}
+
+<div class="container not-home careers-listing">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<h2 class="pink-header">{{ page.headline }}</h2>
+		</div>
+	</div>
+</div>
+
+<div class="container questions not-home">
+	<div class="row green reg">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+			<!-- First grid of bios/headshots -->
+
+			<div class="grid-photo-link team-members">
+				{% for child in page.nav_children %}
+					<div class="member">
+						<div class="inner">
+							<div class="headshot"><a href="{{ child.url }}"><img src="{{ child.meta_image_large_url }}" alt=""></a></div>
+							<div class="name">{{ child.name }}</div>
+							<div class="title">{{ child.headline }}</div>
+
+							<div class="content modal fade" id="gfl-{{child.id}}">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-body">
+											<h3>{{ child.name }}</h3>
+											<div class="title">{{ child.headline }}</div>
+											{{ child.basic.content }}
+										</div>
+										<div class="modal-footer">
+										  <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ str_close }}</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -337,7 +337,7 @@ h2.pink-header {color:#FF00FF; padding-top:40px;@media screen and (min-width: 76
 .not-home .col-md-8.canada-logos img {margin:0 10px 10px;@media screen and (max-width: 568px) {max-width:70px;}}
 @media (min-width: 768px) {
 .not-home .col-md-8 {
-    width: 692px;
+    width: 795px;
     margin: 0 auto !important;
     float: none;
   padding: 0;}}
@@ -637,13 +637,13 @@ content:'';
 	}
 }
 
-.grid-photo-link a {
+.grid-photo-link .headshot a {
 	display: block;
 }
 
 .our-board a.blocks:after, .grid-photo-link area:after {display:none;}
 
-.our-board a.blocks:hover:after, .grid-photo-link a:hover:after {
+.our-board a.blocks:hover:after, .grid-photo-link .headshot a:hover:after {
 	position: absolute;
     content:"";
     background-image:none;
@@ -653,11 +653,11 @@ content:'';
     bottom:0;
     border:6px solid #FF00FF
 }
-.team {color:#fff;}
+// .team {color:#fff;}
 .team p {margin-bottom:5px !important;}
 .team p.head {opacity:.7; font-style:normal;}
 .team a:hover:after {
-    border:6px solid #5EFFC9 !important;width:100%;background-image:none;
+    border:6px solid #FF00FF ;width:100%;background-image:none;
 }
 
 .our-board .col-md-4, .grid-photo-link .col-md-4 {
@@ -677,9 +677,65 @@ content:'';
 	}
 }
 
+//aggregated team page - ABX spring 2021
+
+
 .grid-photo-link {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 16px;
+
+	.member {
+		flex-basis: calc(33% - 12px);
+		margin-bottom: 50px;
+
+		.inner {
+			
+		}
+	}
+
 	tr, td {
 		height: auto !important;
+	}
+
+	.headshot {
+		img {
+			width: 100%;
+		}
+	}
+
+	.name {
+		text-transform: uppercase;
+	}
+
+	.title {
+		font-style: italic;
+	}
+
+	.modal-dialog {
+		h3 {
+			margin-bottom: 0;
+		}
+
+		.title {
+			margin-bottom: 1em;
+		}
+
+		@media screen and (min-width: $screen-sm-min) {
+			max-width: 700px;
+			width: 700px;
+		}
+	}
+
+	@media screen and (max-width: $screen-sm-min) {
+		flex-direction: column;
+		flex-wrap: initial;
+
+		.member {
+			
+		}
 	}
 }
 
@@ -5566,8 +5622,8 @@ form.donation_form {
 
 	.btn-primary {
 		max-width: 30%;
-	margin-left: auto;
-	margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.navigation {
