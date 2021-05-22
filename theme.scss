@@ -5506,12 +5506,83 @@ ul.language-switch {
 	}
 }
 
+//donation v2
+.content-pages-show-donation-v2-wide {
 
-.form {
-	max-width: 80%;
+}
+
+form.donation_form {
+	padding-bottom: 50px;
+
+	.form-progress-indicator {
+		width: 100%;
+		left: auto;
+	}
+
+	.progress-indicator-stages {
+		li {
+			width: 33.3333%;
+			margin-right: 0;
+			padding-bottom: 12px;
+			color: inherit;
+
+			&::after {
+				display: none;
+			}
+
+			.stage-label {
+				display: block;
+				padding-bottom: 5px;
+			}
+
+			.stage-count {
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
+	.radio-inline label.radio {
+		line-height: 23px !important;
+		font-size: 18px !important;
+	}
+
+	input[type=radio] {
+		appearance: auto; 
+		+ label {
+			display: inline-block;
+			margin-right: 2em;
+			margin-bottom: 0;
+		}
+	}
+
+	input.text {
+		border: 1px solid #ccc;
+	}
+
+	input[type=number] {
+		padding: 15px;
+	}
+
+	.btn-primary {
+		max-width: 30%;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 2em;
+	}
+
+	.navigation {
+		font-size: 14px;
+	}
+
+	.form-group .form-error {
+		font-size: 14px;
+	}
+
+	.form-control.card-field {
+		height: auto;
+		padding: 0;
+		border: inherit;
+	}
 }
 
 
